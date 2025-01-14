@@ -9,7 +9,8 @@ Employee retention is critical for organizational success. This project aims to 
 Identify key drivers of employee churn.
 Predict when employees are likely to quit.
 Provide actionable insights to improve employee retention.
-Dataset Overview
+
+## Dataset Overview
 
 The dataset used in this project is sourced from IBM HR Analytics Employee Attrition & Performance. It includes data for 1,470 employees, with various attributes such as demographics, job role, satisfaction levels, and performance metrics.
 
@@ -58,11 +59,13 @@ Summarizing insights and actionable recommendations for reducing employee attrit
 Listing references and tools used in the project.
 Tech Stack
 
-Languages: Python, SQL
+## Languages: 
+Python, SQL
 Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost, LightGBM
 Visualization Tools: Power BI, Tableau
 Version Control: Git/GitHub
-Project Structure
+
+## Project Structure
 
 HR-Analytics-IBM-Attrition/
 ├── data/                       # Dataset files
@@ -74,18 +77,20 @@ HR-Analytics-IBM-Attrition/
 └── .gitignore                  # Ignored files and folders
 How to Run
 
-Clone this repository:
+## Clone this repository:
 git clone https://github.com/your-username/HR-Analytics-IBM-Attrition.git
 cd HR-Analytics-IBM-Attrition
 Install dependencies:
 pip install -r requirements.txt
 Run the Jupyter notebooks or Python scripts in the notebooks/ or src/ directory.
-Results
 
-Identified the top drivers of employee attrition, including job satisfaction, work-life balance, and salary.
-Predicted employee attrition with an accuracy of X% (replace X with your model's accuracy).
+## Results
+
+Identified the top drivers of employee attrition, including years at organisation, monthly income, and total working years were found to be important predictors of employee attrition.
+Predicted employee attrition with an accuracy of 78% 
 Provided actionable insights through interactive dashboards.
-References
+
+## References
 
 IBM HR Analytics Employee Attrition & Performance Dataset
 IBM Watson Analytics
