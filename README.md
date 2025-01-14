@@ -59,5 +59,31 @@ Languages: Python, SQL
 Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost, LightGBM
 Visualization Tools: Power BI, Tableau
 Version Control: Git/GitHub
+Project Structure
 
-  
+HR-Analytics-IBM-Attrition/
+├── data/                       # Dataset files
+├── notebooks/                  # Jupyter notebooks for analysis
+├── src/                        # Python scripts for preprocessing, modeling, and evaluation
+├── visualizations/             # Power BI/Tableau dashboards
+├── README.md                   # Project overview and instructions
+├── requirements.txt            # Dependencies for the project
+└── .gitignore                  # Ignored files and folders
+How to Run
+
+Clone this repository:
+git clone https://github.com/your-username/HR-Analytics-IBM-Attrition.git
+cd HR-Analytics-IBM-Attrition
+Install dependencies:
+pip install -r requirements.txt
+Run the Jupyter notebooks or Python scripts in the notebooks/ or src/ directory.
+Results
+
+Identified the top drivers of employee attrition, including job satisfaction, work-life balance, and salary.
+Predicted employee attrition with an accuracy of X% (replace X with your model's accuracy).
+Provided actionable insights through interactive dashboards.
+References
+
+IBM HR Analytics Employee Attrition & Performance Dataset
+IBM Watson Analytics
+Various open-source libraries and tools.
