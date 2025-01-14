@@ -1,10 +1,10 @@
-HR Analytics: IBM Employee Attrition & Performance
+# HR Analytics: IBM Employee Attrition & Performance
 
-Problem Statement
+## Problem Statement
 
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
 
-In this case study, we address the following objectives:
+### In this case study, we address the following objectives:
 
 Identify key drivers of employee churn.
 Predict when employees are likely to quit.
@@ -13,9 +13,12 @@ Dataset Overview
 
 The dataset used in this project is sourced from IBM HR Analytics Employee Attrition & Performance. It includes data for 1,470 employees, with various attributes such as demographics, job role, satisfaction levels, and performance metrics.
 
-Source: IBM HR Analytics Employee Attrition & Performance (fictional dataset created by IBM data scientists).
-Purpose: The dataset was designed to demonstrate the IBM Watson Analytics tool for analyzing employee attrition.
-Key Steps Involved
+## Source: 
+IBM HR Analytics Employee Attrition & Performance (fictional dataset created by IBM data scientists).
+## Purpose: 
+The dataset was designed to demonstrate the IBM Watson Analytics tool for analyzing employee attrition.
+
+## Key Steps Involved
 
 1. Data Exploration
 Gaining an initial understanding of the dataset.
