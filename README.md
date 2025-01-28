@@ -44,8 +44,6 @@ Feature importance from machine learning models.
 Using machine learning algorithms to predict employee attrition:
 Logistic Regression.
 Random Forest.
-Support Vector Machines (SVM).
-Gradient Boosting (XGBoost, LightGBM).
 7. Model Evaluation
 Evaluating model performance using:
 Accuracy.
@@ -61,8 +59,7 @@ Tech Stack
 
 ## Languages: 
 Python, SQL
-Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost, LightGBM
-Visualization Tools: Power BI, Tableau
+Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, 
 Version Control: Git/GitHub
 
 ## Project Structure
