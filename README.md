@@ -64,22 +64,16 @@ Version Control: Git/GitHub
 
 ## Project Structure
 
-### HR-Analytics-IBM-Attrition/
-### ├── data/                       # Dataset files
-### ├── notebooks/                  # Jupyter notebooks for analysis
-### ├── src/                        # Python scripts for preprocessing, modeling, and evaluation
-### ├── visualizations/             # Power BI/Tableau dashboards
-### ├── README.md                   # Project overview and instructions
-### ├── requirements.txt            # Dependencies for the project
-### └── .gitignore                  # Ignored files and folders
+### HR-Analytics-IBM-Attrition
+├── data/                       # Dataset files
+├── notebooks/                  # Jupyter notebooks for analysis
+├── src/                        # Python scripts for preprocessing, modeling, and evaluation
+├── visualizations/             # Power BI/Tableau dashboards
+├── README.md                   # Project overview and instructions
+├── requirements.txt            # Dependencies for the project
+└── .gitignore                  # Ignored files and folders
 
-## How to Run
-
-## Clone this repository:
-git clone https://github.com/your-username/HR-Analytics-IBM-Attrition.git
-cd HR-Analytics-IBM-Attrition
-
-Install dependencies:
+**Install dependencies:**
 pip install -r requirements.txt
 Run the Jupyter notebooks or Python scripts in the notebooks/ or src/ directory.
 
