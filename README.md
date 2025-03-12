@@ -76,18 +76,14 @@ HR-Analytics-IBM-Attrition/
 ├── README.md                   # Project overview and instructions
 ├── requirements.txt            # Dependencies for the project
 └── .gitignore                  # Ignored files and folders
-⚙️ Installation
 
-# Clone the repository:
-git clone https://github.com/yourusername/HR-Analytics-IBM-Attrition.git
-cd HR-Analytics-IBM-Attrition
+# ⚙️ Installation
+
 Install the required dependencies:
 pip install -r requirements.txt
-🚀 How to Run the Project
 
-# Run Jupyter notebooks for exploratory data analysis and modeling:
-cd notebooks/
-jupyter notebook
-Or run the Python scripts located in the src/ directory:
-cd src/
-python your_script.py
+# 🚀 How to Run the Project
+
+Run Jupyter notebooks for exploratory data analysis and modeling using jupyter notebook
+
+run the Python scripts located in the src/ directory using python your_script.py
