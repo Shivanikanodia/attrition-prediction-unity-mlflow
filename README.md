@@ -62,9 +62,13 @@ Python, SQL
 Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn 
 Version Control: Git/GitHub
 
-## Project Structure
+## HR-Analytics-IBM-Attrition
 
-### HR-Analytics-IBM-Attrition
+A comprehensive analysis of IBM HR Analytics Employee Attrition & Performance dataset to identify key drivers of attrition, build predictive models, and provide actionable insights through interactive dashboards.
+
+# 📁 Project Structure
+
+HR-Analytics-IBM-Attrition/
 ├── data/                       # Dataset files
 ├── notebooks/                  # Jupyter notebooks for analysis
 ├── src/                        # Python scripts for preprocessing, modeling, and evaluation
@@ -72,20 +76,18 @@ Version Control: Git/GitHub
 ├── README.md                   # Project overview and instructions
 ├── requirements.txt            # Dependencies for the project
 └── .gitignore                  # Ignored files and folders
+⚙️ Installation
 
-**Install dependencies:**
-pip install 
--r requirements.txt
-Run the Jupyter notebooks or Python scripts in the notebooks/ or src/ directory.
+# Clone the repository:
+git clone https://github.com/yourusername/HR-Analytics-IBM-Attrition.git
+cd HR-Analytics-IBM-Attrition
+Install the required dependencies:
+pip install -r requirements.txt
+🚀 How to Run the Project
 
-## Results
-
--Identified the top drivers of employee attrition, including years at organisation, monthly income, and total working years were found to be important predictors of employee attrition.
--Predicted employee attrition with an accuracy of 78% 
--Provided actionable insights through interactive dashboards.
-
-## References
-
--IBM HR Analytics Employee Attrition & Performance Dataset
--IBM Watson Analytics
--Various open-source libraries and tools.
+# Run Jupyter notebooks for exploratory data analysis and modeling:
+cd notebooks/
+jupyter notebook
+Or run the Python scripts located in the src/ directory:
+cd src/
+python your_script.py
