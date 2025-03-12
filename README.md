@@ -59,7 +59,7 @@ Tech Stack
 
 ## Languages: 
 Python, SQL
-Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, 
+Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn 
 Version Control: Git/GitHub
 
 ## Project Structure
@@ -74,17 +74,18 @@ Version Control: Git/GitHub
 └── .gitignore                  # Ignored files and folders
 
 **Install dependencies:**
-pip install -r requirements.txt
+pip install 
+-r requirements.txt
 Run the Jupyter notebooks or Python scripts in the notebooks/ or src/ directory.
 
 ## Results
 
-Identified the top drivers of employee attrition, including years at organisation, monthly income, and total working years were found to be important predictors of employee attrition.
-Predicted employee attrition with an accuracy of 78% 
-Provided actionable insights through interactive dashboards.
+-Identified the top drivers of employee attrition, including years at organisation, monthly income, and total working years were found to be important predictors of employee attrition.
+-Predicted employee attrition with an accuracy of 78% 
+-Provided actionable insights through interactive dashboards.
 
 ## References
 
-IBM HR Analytics Employee Attrition & Performance Dataset
-IBM Watson Analytics
-Various open-source libraries and tools.
+-IBM HR Analytics Employee Attrition & Performance Dataset
+-IBM Watson Analytics
+-Various open-source libraries and tools.
