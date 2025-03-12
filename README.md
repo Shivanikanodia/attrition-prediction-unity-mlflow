@@ -66,17 +66,6 @@ Version Control: Git/GitHub
 
 A comprehensive analysis of IBM HR Analytics Employee Attrition & Performance dataset to identify key drivers of attrition, build predictive models, and provide actionable insights through interactive dashboards.
 
-# 📁 Project Structure
-
-HR-Analytics-IBM-Attrition/
-├── data/                       # Dataset files
-├── notebooks/                  # Jupyter notebooks for analysis
-├── src/                        # Python scripts for preprocessing, modeling, and evaluation
-├── visualizations/             # Power BI/Tableau dashboards
-├── README.md                   # Project overview and instructions
-├── requirements.txt            # Dependencies for the project
-└── .gitignore                  # Ignored files and folders
-
 # ⚙️ Installation
 
 Install the required dependencies:
