@@ -25,36 +25,43 @@ The dataset was designed to demonstrate the IBM Watson Analytics tool for analyz
 Gaining an initial understanding of the dataset.
 Identifying key features and data types.
 Checking for missing or inconsistent data.
-2. Data Preprocessing
+
+3. Data Preprocessing
 Handling missing values.
 Encoding categorical variables.
 Normalizing numerical features for modeling.
-3. Exploratory Data Analysis (EDA)
-Analyzing trends, patterns, and distributions using Python and SQL.
+
+4. Exploratory Data Analysis (EDA)
+Analyzing trends, patterns, and distributions using Python.
 Identifying relationships between features and employee attrition.
-4. Data Visualization
+
+5. Data Visualization
 Visualizing trends and key findings using:
 Python (Matplotlib, Seaborn).
-Power BI/Tableau for interactive dashboards.
-5. Feature Selection
+
+6. Feature Selection
 Identifying the most important predictors of employee attrition using:
 Correlation matrices.
 Feature importance from machine learning models.
-6. Model Selection and Training
+
+7. Model Selection and Training
 Using machine learning algorithms to predict employee attrition:
 Logistic Regression.
 Random Forest.
-7. Model Evaluation
+
+8. Model Evaluation
 Evaluating model performance using:
 Accuracy.
 Precision, Recall, and F1-Score.
 ROC-AUC Curve.
-8. Classification Report and Accuracy
+
+9. Classification Report and Accuracy
 Generating a detailed classification report.
 Explaining the accuracy and implications of the model's predictions.
-9. Conclusion and Sources
+
+11. Conclusion and Sources
 Summarizing insights and actionable recommendations for reducing employee attrition.
-Listing references and tools used in the project.
+
 Tech Stack
 
 ## Languages: 
