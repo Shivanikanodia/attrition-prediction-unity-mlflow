@@ -36,9 +36,12 @@ Key Results from Mlflow:
 
 <img width="1283" alt="Screenshot 2025-06-10 at 12 52 20" src="https://github.com/user-attachments/assets/f788c158-0d76-4af5-afbf-98bf95542513" />
 
+<img width="480" alt="Screenshot 2025-06-10 at 12 52 24" src="https://github.com/user-attachments/assets/00e00a0b-1db4-4e53-8ce6-bbc9aa92aeb4" />
+
 <img width="1250" alt="Screenshot 2025-06-10 at 12 49 27" src="https://github.com/user-attachments/assets/5b3dea63-0ab7-4186-8333-727da25c7ac4" />
 
-<img width="480" alt="Screenshot 2025-06-10 at 12 52 24" src="https://github.com/user-attachments/assets/00e00a0b-1db4-4e53-8ce6-bbc9aa92aeb4" />
+<img width="467" alt="Screenshot 2025-06-10 at 12 49 32" src="https://github.com/user-attachments/assets/0e2995bf-11d4-43f9-87e8-35611077e260" />
+
 
 
 9. Conclusion and Sources
