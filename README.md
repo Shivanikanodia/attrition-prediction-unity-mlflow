@@ -35,7 +35,7 @@ This structure enables governed, scalable, and versioned access to data for the 
 ![Unity Catalog](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
 
-Below code describes all the tables stored in unity catalog. 
+Below code describes all the tables stored in unity catalog, which is reliable data tracking for ML pipeline versioning.
 
 <img width="1022" alt="Unity Screenshot" src="https://github.com/user-attachments/assets/741696ff-5a02-4574-b761-50424fcd0900" />
 
