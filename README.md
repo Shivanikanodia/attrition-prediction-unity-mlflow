@@ -1,4 +1,4 @@
-## Employee Attrition Prediction Pipeline using MLflow, Unity Catalog & SHAP. 
+## Employee Attrition Prediction Pipeline using MLflow, Unity Catalog & SHAP 
 
 *Predicting employee churn and uncovering drivers of attrition using Classification Models - XGBoost, SHAP for Explainaibility, Unity Catalog for data tracking and MLflow for model management and creating reproducible codes*. 
 
@@ -62,7 +62,7 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ### Feature Selection Techniques:
 
-To ensure only statistically significant features contribute to the model, univariate feature selection was applied:
+To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog_ML_catalog.ml_schema**
 
 ### Categorical Features vs Categorical Target
 
