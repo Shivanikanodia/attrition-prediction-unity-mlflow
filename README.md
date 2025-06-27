@@ -100,7 +100,9 @@ Transformed categorical features into numeric format using label encoding.
 
 ---
 
-### MLflow Metrics and Summary
+### MLflow Metrics and Summary: 
+
+As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duration of each run and metrics logged (Focused on Precision and Recall trade off with thresold value best works for our use case - detecting employees likely to leave and not giving false alarms by choosing higher precision from XGboost. 
 
 <img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
