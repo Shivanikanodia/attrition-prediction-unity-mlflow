@@ -58,7 +58,6 @@ Human Resources with Lower daily rate range for employees who left compared to t
 
 These thresholds help strike a balance between statistical rigor and practical model performance, reducing noise and enhancing model interpretability.
 
-
 <img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
 
