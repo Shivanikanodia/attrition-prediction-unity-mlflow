@@ -140,9 +140,9 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 
 ### SHAP Explainability:
 
-SHAP (SHapley Additive exPlanations) analysis revealed the top influential features like  MonthlyIncome, DailyRate, TotalWorkingYears and YearsAtCompany. 
-Its explained that Daily rate contributed maximum to our model followe by employee tenure. 
-High feature values (in pink) and low values (in blue) were assessed for impact on the model’s predictions, offering transparency and trust in the results.
+SHAP analysis identified the most influential features in predicting attrition, with DailyRate, MonthlyIncome, TotalWorkingYears, and YearsAtCompany leading the list. DailyRate had the strongest impact, followed by tenure-related features.
+High values (pink) and low values (blue) were assessed for their influence on predictions, offering clear and transparent insights into model behavior.
+
 
 <img width="699" alt="ROC Curve" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
 
@@ -153,10 +153,10 @@ High feature values (in pink) and low values (in blue) were assessed for impact 
 This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
 The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
 
-- ✅ **True Negatives (TN)**: 205 — Correctly predicted “no attrition”
-- ✅ **True Positives (TP)**: 32 — Correctly predicted “attrition”
-- ❌ **False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
-- ❌ **False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
+**True Negatives (TN)**: 205 — Correctly predicted “no attrition”
+  **True Positives (TP)**: 32 — Correctly predicted “attrition”
+  **False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
+  **False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
 
 - Lower false negatives improve recall — crucial for catching real churn cases.
 
