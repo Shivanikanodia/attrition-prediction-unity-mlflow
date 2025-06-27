@@ -1,46 +1,62 @@
- Employee Attrition Prediction using Mlflow Pipeline
+# Predictive Modeling with Explainability, logging using MLflow and Unity Catalog for managing and securing metadata. 
 
 ## Problem Statement
+Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance
 
-Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
+This project demonstrates an end-to-end machine learning pipeline using Databricks. It includes data exploration with Unity Catalog, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using SHAP. MLflow is used extensively to track experiments, log metrics, and store artifacts for reproducibility.
 
-### In this case study, we address the following objectives:
+## Objectives
+Build an accurate attrition prediction model using clean, preprocessed data.
 
-Identify key drivers of employee churn.
-Predict when employees are likely to quit.
-Create Mlflow Pipeline for Model Reproducibility, version control and Management 
+Use Unity Catalog for secure and centralized data access.
+
+Interpret model behavior using SHAP explainability and Identify key drivers of employee churn.
+
+Create Mlflow Pipeline for Model Reproducibility, version control and Management, logging metrics and artifacts. 
 
 ## Dataset Overview
 
 The dataset used in this project is sourced includes data for 1,470 employees, with various attributes such as demographics, job role, satisfaction levels, and performance metrics.
 
 ## Key Steps Involved
+├── data/
+│   └── raw, processed datasets
+├── notebooks/
+│   └── EDA, Modeling, SHAP, MLflow Logging
+├── outputs/
+│   └── plots, reports, confusion matrix, SHAP
+├── models/
+│   └── Saved model.pkl files
+├── README.md
+├── requirements.txt
+└── appendix/
+    └── project_structure.txt
 
-1. Data Exploration
+Unity Catalog Integration: 
 
-3. Data Preprocessing
+![image](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
-4. Exploratory Data Analysis (EDA)
 
-5. Data Visualization
+<img width="1075" alt="Screenshot 2025-06-26 at 19 48 37" src="https://github.com/user-attachments/assets/ff088eb7-efc3-4874-8d5f-8f1d66e45913" />
 
-6. Feature Selection and Model Explainability 
 
-7. Model Selection and Training
+<img width="1068" alt="Screenshot 2025-06-26 at 19 48 49" src="https://github.com/user-attachments/assets/4d0b6e6c-d0b5-4e9c-bdf4-b104623a0ef0" />
 
-8. Model Evaluation and Model Management using Mlflow:
 
-![image](https://github.com/user-attachments/assets/e5d40e44-1190-4325-8b64-cea5400ff3e8)
+<img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
-Key Results from Mlflow: 
 
-<img width="1283" alt="Screenshot 2025-06-10 at 12 52 20" src="https://github.com/user-attachments/assets/f788c158-0d76-4af5-afbf-98bf95542513" />
+<img width="1233" alt="Screenshot 2025-06-26 at 19 23 06" src="https://github.com/user-attachments/assets/5c3c49d6-c90c-41f4-93d4-c038d72e7e35" />
 
-<img width="480" alt="Screenshot 2025-06-10 at 12 52 24" src="https://github.com/user-attachments/assets/00e00a0b-1db4-4e53-8ce6-bbc9aa92aeb4" />
+<img width="922" alt="Screenshot 2025-06-26 at 19 30 00" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
 
-<img width="1250" alt="Screenshot 2025-06-10 at 12 49 27" src="https://github.com/user-attachments/assets/5b3dea63-0ab7-4186-8333-727da25c7ac4" />
+<img width="914" alt="Screenshot 2025-06-26 at 19 30 06" src="https://github.com/user-attachments/assets/e655b1c0-9b12-438c-bb14-dda791281ab1" />
 
-<img width="467" alt="Screenshot 2025-06-10 at 12 49 32" src="https://github.com/user-attachments/assets/0e2995bf-11d4-43f9-87e8-35611077e260" />
+<img width="699" alt="Screenshot 2025-06-26 at 18 27 03" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
+
+
+<img width="618" alt="Screenshot 2025-06-26 at 18 27 13" src="https://github.com/user-attachments/assets/062074f1-5a47-4028-9b3e-767ee474cc7c" />
+
 
 
 
@@ -50,16 +66,9 @@ Summarizing insights and actionable recommendations
 ## Languages: 
 Python, SQL
 Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn , mlflow, pyspark 
-Version Control: Git/GitHub
-Notebook: Databricks 
+Version Control: Databricks Mlflow
 
 # ⚙️ Installation
 
 Install the required dependencies:
 pip install -r requirements.txt
-
-# 🚀 How to Run the Project
-
-Run Jupyter notebooks for exploratory data analysis and modeling using jupyter notebook
-
-run the Python scripts located in the src/ directory using python your_script.py
