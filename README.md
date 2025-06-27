@@ -46,12 +46,13 @@ Sales Representative has Significant difference between attrition groups: those 
 
 Human Resources with Lower daily rate range for employees who left compared to those who stayed. Potential area for pay structure revision or deeper investigation into job satisfaction. 
 
-### ANOVA Test AND Chi-Square testing 
+## ANOVA Test AND Chi-Square test to detect significance of numerical and categorical values in Predicting Attrition 
 
-
-
+1. ANOVA Test Shows P value and F Statistic for feature coulmns. Coulmns with p value less than 0.05 are selected with F Statistic >30.
+ 
 <img width="888" alt="Screenshot 2025-06-26 at 19 58 12" src="https://github.com/user-attachments/assets/e46a5a90-3bb6-4f56-9998-c83d4c28120d" />
 
+2. Chi Sqaure Test Shows P value and F Statistic for feature coulmns. Coulmns with p value less than 0.05 are selected. 
 
 <img width="901" alt="Screenshot 2025-06-26 at 19 58 19" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
 
