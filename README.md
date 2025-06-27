@@ -1,6 +1,7 @@
-## Employee Attrition Prediction Pipeline using MLflow, Unity Catalog & SHAP 
+## Workforce Attrition Prediction with Explainable and Reproducible ML
 
-*Predicting employee churn and uncovering drivers of attrition using Classification Models - XGBoost, SHAP for Explainaibility, Unity Catalog for data tracking and MLflow for model management and creating reproducible codes*. 
+*Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices.
+Built with XGBoost for classification, SHAP for explainability, Unity Catalog for governed data access, and MLflow for experiment tracking and model reproducibility* 
 
 ### Problem Statement:
 
