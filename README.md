@@ -1,6 +1,6 @@
-# 🧠 Employee Attrition Prediction Pipeline with MLflow, Unity Catalog & SHAP
+## Employee Attrition Prediction Pipeline with MLflow, Unity Catalog & SHAP
 
-## 📌 Problem Statement
+### Problem Statement
 
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
 
@@ -8,7 +8,7 @@ This project demonstrates an end-to-end machine learning pipeline using **Databr
 
 ---
 
-## 🎯 Objectives
+### Objectives
 
 - Build an accurate attrition prediction model using clean, preprocessed data.
 - Use Unity Catalog for secure and centralized data access.
@@ -17,14 +17,14 @@ This project demonstrates an end-to-end machine learning pipeline using **Databr
 
 ---
 
-## 📊 Dataset Overview
+### Dataset Overview
 
 - **Total records**: 1,470 employees
 - **Attributes**: Demographics, job role, satisfaction levels, performance metrics, and more.
 
 ---
 
-## 🗂️ Unity Catalog Integration
+### Unity Catalog for Data Storage:
 
 Created a Unity Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format.
 
@@ -36,7 +36,7 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ---
 
-## 📊 Data Visualization
+### Data Visualization
 
 ### 1. Years Since Last Promotion By Job Level and Attrition
 
@@ -109,7 +109,7 @@ As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duratio
 <img width="1233" alt="MLflow Metrics 2" src="https://github.com/user-attachments/assets/5c3c49d6-c90c-41f4-93d4-c038d72e7e35" />
 
 
-### MLFlow Tracking Dashboard
+### MLFlow Tracking Dashboard:
 
 We tracked and compared multiple models — Logistic Regression, Random Forest, and XGBoost — using MLflow. 
 
@@ -117,29 +117,32 @@ Each run recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, 
 
 This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
 
+
 <img width="922" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
+
+--
 
 <img width="914" alt="Precision-Recall" src="https://github.com/user-attachments/assets/e655b1c0-9b12-438c-bb14-dda791281ab1" />
 
-### SHAP Explainability
-SHAP (SHapley Additive exPlanations) analysis revealed the top influential features:
+--
 
-MonthlyIncome, DailyRate, TotalWorkingYears AND YearsAtCompany
+### SHAP Explainability:
 
+SHAP (SHapley Additive exPlanations) analysis revealed the top influential features like  MonthlyIncome, DailyRate, TotalWorkingYears and YearsAtCompany. 
+Its explained that Daily rate contributed maximum to our model followe by employee tenure. 
 High feature values (in pink) and low values (in blue) were assessed for impact on the model’s predictions, offering transparency and trust in the results.
-
 
 <img width="699" alt="ROC Curve" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
 
+--
 
-### Confusion Matrix
-
-<img width="618" alt="SHAP Summary" src="https://github.com/user-attachments/assets/062074f1-5a47-4028-9b3e-767ee474cc7c" />
+### Confusion Matrix:
 
 This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
-The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as no-attrition and 15 as attrition
+The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
 
-🎯 This helped assess class-wise performance and diagnose bias.
+![image](https://github.com/user-attachments/assets/57be8037-3c30-4c01-ac9e-fd2fa3967109)
+
 
 ---
 
