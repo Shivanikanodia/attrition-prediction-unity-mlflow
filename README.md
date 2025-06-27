@@ -66,8 +66,10 @@ To ensure only statistically significant features contribute to the model, univa
 
 ### Categorical Features vs Categorical Target
 
-- **Method**: Chi-Square Test
-- **Criteria**: `p < 0.05` and `Chi-Square > 15`
+- Used Chi-Square Test to test whether there's an association between our  two categorical variables. (Eg., Attrition AND Job Roles (Sales, HR, IT))
+- Features with `p < 0.05` and `Chi-Square > 15` were selected from the testing results to further add into our analysis.
+
+- If the observed vs. expected frequencies differ significantly, the feature is likely influencing the target.
 
 <img width="888" alt="Chi-Square Stats" src="https://github.com/user-attachments/assets/e46a5a90-3bb6-4f56-9998-c83d4c28120d" />
 
@@ -75,8 +77,8 @@ To ensure only statistically significant features contribute to the model, univa
 
 ### Numerical Features vs Categorical Target
 
-- **Method**: ANOVA F-Test
-- **Criteria**: `p < 0.05` and `F-statistic > 5`
+- Used ANOVA F-Test to measure whether the means of a our numerical feature differ significantly across the classes (Yes/No) of the target - Attrition..
+- Features with p values < 0.05` states that the difference is statistically significant and `F-statistic > 5` were selected from the test. 
 
 <img width="901" alt="ANOVA Stats" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
 
@@ -112,11 +114,11 @@ Logged key hyperparameters, evaluation metrics, trained model and visual artifac
 
 ### MLflow Metrics and Summary: 
 
-As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duration of each run and metrics logged. 
+As we can see screenshot below from Databricks MLFlow UI with Run Name, Duration of each Run and metrics logged. 
 
-Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Resgistry in databricks to serve  it later for deployment and making production level predictions.
+Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Resgistry in databricks to serve it later for deployment and making production level predictions.
 
-We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms.
+We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms of employee leaving.
 
 <img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
@@ -125,7 +127,7 @@ We used precision-recall curve evaluation and selected an optimal threshold to m
 
 ### MLFlow Tracking Dashboard:
 
-We tracked and compared multiple models — Logistic Regression, Random Forest, and XGBoost — using MLflow. 
+I tracked and compared multiple models — Logistic Regression, Random Forest, and XGBoost — using MLflow. 
 
 Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall and f1 score. 
 
