@@ -46,17 +46,17 @@ Sales Representative has Significant difference between attrition groups: those 
 
 Human Resources with Lower daily rate range for employees who left compared to those who stayed. Potential area for pay structure revision or deeper investigation into job satisfaction. 
 
-## ANOVA Test AND Chi-Square test to detect significance of numerical and categorical values in Predicting Attrition 
+## To ensure that only statistically significant features contribute to the model, I applied univariate feature selection techniques tailored to the data types:
 
-1. ANOVA Test Shows P value and F Statistic for feature coulmns. Coulmns with p value less than 0.05 are selected with F Statistic >30.
+**1.For categorical features (vs. categorical target), I applied the Chi-Square test. Features with a p-value < 0.05 and a Chi-Square statistic > 15 were retained. This threshold indicates strong dependence between the feature and target variable, confirming their predictive relevance.**
  
 <img width="888" alt="Screenshot 2025-06-26 at 19 58 12" src="https://github.com/user-attachments/assets/e46a5a90-3bb6-4f56-9998-c83d4c28120d" />
 
-2. Chi Sqaure Test Shows P value and F Statistic for feature coulmns. Coulmns with p value less than 0.05 are selected. 
+**2.  For numerical features (vs. categorical target), I used the ANOVA F-test. I selected features with a p-value < 0.05 (indicating statistical significance) and an F-statistic > 5, ensuring that selected features have a meaningful variance between groups and contribute to class separation.**
 
 <img width="901" alt="Screenshot 2025-06-26 at 19 58 19" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
 
-
+These thresholds help strike a balance between statistical rigor and practical model performance, reducing noise and enhancing model interpretability.
 
 
 <img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
