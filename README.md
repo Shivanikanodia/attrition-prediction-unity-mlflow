@@ -20,17 +20,17 @@ The dataset used in this project is sourced includes data for 1,470 employees, w
 
 ## Key Steps Involved
 
-## # Unity Catalog Integration: 
+### Unity Catalog Integration: 
 
 ![image](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
 ## Data Visualization:
 
-1. 
+#### 1. Years Since Last Promotion By Job Level and Attrition. 
 
 <img width="1075" alt="Screenshot 2025-06-26 at 19 48 37" src="https://github.com/user-attachments/assets/ff088eb7-efc3-4874-8d5f-8f1d66e45913" />
 
-2. 
+#### 2. Daily Rate By Job Level and Attrition. 
 
 <img width="1068" alt="Screenshot 2025-06-26 at 19 48 49" src="https://github.com/user-attachments/assets/4d0b6e6c-d0b5-4e9c-bdf4-b104623a0ef0" />
 
