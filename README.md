@@ -1,5 +1,7 @@
 ## Employee Attrition Prediction Pipeline using MLflow, Unity Catalog & SHAP. 
 
+*Predicting employee churn and uncovering drivers of attrition using Classification Models - XGBoost, SHAP for Explainaibility, Unity Catalog for data tracking and MLflow for model management and creating reproducible codes*. 
+
 ### Problem Statement
 
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
@@ -62,7 +64,7 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 To ensure only statistically significant features contribute to the model, univariate feature selection was applied:
 
-### Categorical Features vs Categorical Target)
+### Categorical Features vs Categorical Target
 
 - **Method**: Chi-Square Test
 - **Criteria**: `p < 0.05` and `Chi-Square > 15`
@@ -71,7 +73,7 @@ To ensure only statistically significant features contribute to the model, univa
 
 ---
 
-### Numerical Features vs Categorical Target)
+### Numerical Features vs Categorical Target
 
 - **Method**: ANOVA F-Test
 - **Criteria**: `p < 0.05` and `F-statistic > 5`
@@ -82,7 +84,9 @@ To ensure only statistically significant features contribute to the model, univa
 
 ## 🔢 Label Encoding
 
-Transformed categorical features into numeric format using label encoding. This Ensures that our model generalizes well on numerical datasets. 
+Transformed categorical features into numeric format using label encoding. This Ensures that our model generalizes well on numerical datasets.
+
+I did not choose why one-hot encoding to reduce dimensionality for tree-based models like XGBoost which handle label encoding well.
 
 ![Label Encoding](https://github.com/user-attachments/assets/697e7881-331c-47fc-bda3-26e926e8ae46)
 
@@ -106,7 +110,8 @@ This centralized tracking ensured experiment reproducibility, hyperparameter ver
 
 ### MLflow Metrics and Summary: 
 
-As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duration of each run and metrics logged (Focused on Precision and Recall trade off with thresold value best works for our use case - detecting employees likely to leave and not giving false alarms by choosing higher precision from XGboost. 
+As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duration of each run and metrics logged. 
+We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms.
 
 <img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
@@ -143,12 +148,20 @@ High feature values (in pink) and low values (in blue) were assessed for impact 
 This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
 The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
 
+- ✅ **True Negatives (TN)**: 205 — Correctly predicted “no attrition”
+- ✅ **True Positives (TP)**: 32 — Correctly predicted “attrition”
+- ❌ **False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
+- ❌ **False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
+
+- Lower false negatives improve recall — crucial for catching real churn cases.
+
+
 ![image](https://github.com/user-attachments/assets/57be8037-3c30-4c01-ac9e-fd2fa3967109)
 
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 - **Promotion delays** and **low compensation** are key attrition drivers.
 - Unity Catalog ensures secure, governed, and scalable data access.
@@ -156,6 +169,12 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 - MLflow ensures experiment reproducibility and tracking for deployment.
 
 ---
+
+### Future Scope:
+
+Retraining model on live data in production Environment.
+AI Agent to flag alerts on employee attrition under job role, department with strategic recommendations, which can save millions on money on hiring new employee. 
+
 
 ## 🧰 Tech Stack
 
@@ -168,11 +187,15 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 
 ## ⚙️ Installation
 
-```bash
+```
 # Clone the repo
-git clone https://github.com/<your-username>/employee-attrition-mlpipeline.git
+git clone https://github.com/<ShivaniKanodia>/employee-attrition-mlpipeline.git
 cd employee-attrition-mlpipeline
 
+### 🔧 Requirements
+- Python 3.8+
+- Databricks Community or Enterprise account
+
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirements.txt  
 
