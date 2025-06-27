@@ -100,11 +100,20 @@ Transformed categorical features into numeric format using label encoding.
 
 ---
 
-## 📊 MLflow Metrics and Summary
+### MLflow Metrics and Summary
 
 <img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
+
+### MLFlow Tracking Dashboard
+
 <img width="1233" alt="MLflow Metrics 2" src="https://github.com/user-attachments/assets/5c3c49d6-c90c-41f4-93d4-c038d72e7e35" />
+
+We tracked and compared multiple models — Logistic Regression, Random Forest, and XGBoost — using MLflow. 
+
+Each run recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall, f1, optimized_metric and hyperparameters
+
+📌 This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
 
 <img width="922" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
 
@@ -112,7 +121,15 @@ Transformed categorical features into numeric format using label encoding.
 
 <img width="699" alt="ROC Curve" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
 
+
+### Confusion Matrix
+
 <img width="618" alt="SHAP Summary" src="https://github.com/user-attachments/assets/062074f1-5a47-4028-9b3e-767ee474cc7c" />
+
+This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
+The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as no-attrition and 15 as attrition
+
+🎯 This helped assess class-wise performance and diagnose bias.
 
 ---
 
