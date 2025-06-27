@@ -34,6 +34,9 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ![Unity Catalog](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
+
+Below code describes all the tables stored in unity catalog. 
+
 <img width="1022" alt="Unity Screenshot" src="https://github.com/user-attachments/assets/741696ff-5a02-4574-b761-50424fcd0900" />
 
 ---
@@ -62,7 +65,10 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ### Feature Selection Techniques:
 
-To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog_ML_catalog.ml_schema**
+To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog**
+
+**ml_catalog.ml_schema.anova_results**
+**ml_catalog.ml_schema.chisquare_results**
 
 ### Categorical Features vs Categorical Target
 
