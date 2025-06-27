@@ -5,18 +5,26 @@ Built with XGBoost for classification, SHAP for explainability, Unity Catalog fo
 
 ### Problem Statement:
 
-Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
+Employee attrition poses a significant risk to organizational stability and workforce planning.
+This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind their decisions.
 
-*This project demonstrates an end-to-end machine learning pipeline using **Databricks**. It includes data exploration with **Unity Catalog**, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using **SHAP**. **MLflow** is used extensively to track experiments, log metrics, and store artifacts for reproducibility.*
+By leveraging machine learning, the goal is to empower HR teams with proactive insights—helping them improve retention and reduce the high cost of unplanned exits.
 
----
+**This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
-### Objectives:
+- Data Management with Unity Catalog (secure, versioned Delta tables)
 
-- Build an accurate attrition prediction model using clean, preprocessed data.
-- Use Unity Catalog for secure and centralized data access.
-- Interpret model behavior using SHAP and identify key drivers of employee churn.
-- Create an MLflow pipeline for reproducibility, version control, metrics logging, and artifact tracking.
+- Exploratory Analysis to uncover attrition trends by role, income, and promotion history
+
+- Feature Selection using statistical tests (Chi-Square, ANOVA)
+
+- Model Development with tuned XGBoost
+
+- Explainability using SHAP for transparent insights
+
+- Model Tracking with MLflow (parameters, metrics, artifacts, comparison)
+
+Each stage of the pipeline was built for reproducibility, scalability, and interpretability
 
 ---
 
