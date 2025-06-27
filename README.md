@@ -30,9 +30,32 @@ The dataset used in this project is sourced includes data for 1,470 employees, w
 
 <img width="1075" alt="Screenshot 2025-06-26 at 19 48 37" src="https://github.com/user-attachments/assets/ff088eb7-efc3-4874-8d5f-8f1d66e45913" />
 
+
+- Median years since promotion is low for ≈1 year for both groups and no significant difference in promotion wait time between those who left and stayed. This suggests promotion delay isn't a strong attrition factor at entry-level positions.
+
+- For Job level 5 & 5 Those who left (red) tend to have higher "Years Since Last Promotion" and Those who stayed (blue) have lower medians and narrower IQRs. This strongly suggests that delayed promotions at senior levels may increase attrition risk.
+
+- Focus on promotion pathways for senior-level employees as part of your attrition mitigation strategies. 
+
+
 #### 2. Daily Rate By Job Level and Attrition. 
 
 <img width="1068" alt="Screenshot 2025-06-26 at 19 48 49" src="https://github.com/user-attachments/assets/4d0b6e6c-d0b5-4e9c-bdf4-b104623a0ef0" />
+
+Sales Representative has Significant difference between attrition groups: those who left had noticeably lower hourly rates. This suggests undercompensation might be a driver of attrition in this role.
+
+Human Resources with Lower daily rate range for employees who left compared to those who stayed. Potential area for pay structure revision or deeper investigation into job satisfaction. 
+
+### ANOVA Test AND Chi-Square testing 
+
+
+
+<img width="888" alt="Screenshot 2025-06-26 at 19 58 12" src="https://github.com/user-attachments/assets/e46a5a90-3bb6-4f56-9998-c83d4c28120d" />
+
+
+<img width="901" alt="Screenshot 2025-06-26 at 19 58 19" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
+
+
 
 
 <img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
