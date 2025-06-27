@@ -1,11 +1,13 @@
 #### Predictive Modeling with Explainability, logging using MLflow and Unity Catalog for managing and securing metadata. 
 
 ### Problem Statement
+
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance
 
 This project demonstrates an end-to-end machine learning pipeline using Databricks. It includes data exploration with Unity Catalog, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using SHAP. MLflow is used extensively to track experiments, log metrics, and store artifacts for reproducibility.
 
 ### Objectives
+
 Build an accurate attrition prediction model using clean, preprocessed data.
 
 Use Unity Catalog for secure and centralized data access.
@@ -75,24 +77,33 @@ These thresholds help strike a balance between statistical rigor and practical m
 
 <img width="1039" alt="Screenshot 2025-06-26 at 20 10 52" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
 
-#### Model Traning and Evaluation using MLflow
+#### Model Traning and Evaluation using MLflow:
 
 
 ![image](https://github.com/user-attachments/assets/051b5b34-ebd0-42c0-9339-789a19b74836)
 
-### Mlflow Metrics and Summary 
+### Mlflow Metrics and Summary:
 
 
 <img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
 
+
 <img width="1233" alt="Screenshot 2025-06-26 at 19 23 06" src="https://github.com/user-attachments/assets/5c3c49d6-c90c-41f4-93d4-c038d72e7e35" />
+
+
 
 <img width="922" alt="Screenshot 2025-06-26 at 19 30 00" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
 
+
+
 <img width="914" alt="Screenshot 2025-06-26 at 19 30 06" src="https://github.com/user-attachments/assets/e655b1c0-9b12-438c-bb14-dda791281ab1" />
 
+
+
 <img width="699" alt="Screenshot 2025-06-26 at 18 27 03" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
+
+
 
 
 <img width="618" alt="Screenshot 2025-06-26 at 18 27 13" src="https://github.com/user-attachments/assets/062074f1-5a47-4028-9b3e-767ee474cc7c" />
