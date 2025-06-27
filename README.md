@@ -22,6 +22,8 @@ The dataset used in this project is sourced includes data for 1,470 employees, w
 
 ### Unity Catalog Integration: 
 
+Created a Unity Catalog (ml_catalog) and associated schema (ml_schema) under a managed volume to store both the complete dataset and the training subset in Delta format. This structure enables governed, scalable, and versioned access to data for machine learning workflow 
+
 ![image](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
 ## Data Visualization:
@@ -57,6 +59,13 @@ Human Resources with Lower daily rate range for employees who left compared to t
 <img width="901" alt="Screenshot 2025-06-26 at 19 58 19" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
 
 These thresholds help strike a balance between statistical rigor and practical model performance, reducing noise and enhancing model interpretability.
+
+--
+
+### Model Experimentation: 
+
+<img width="1039" alt="Screenshot 2025-06-26 at 20 10 52" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
+
 
 <img width="1267" alt="Screenshot 2025-06-26 at 19 31 20" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
 
