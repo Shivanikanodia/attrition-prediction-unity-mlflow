@@ -1,11 +1,11 @@
-# Predictive Modeling with Explainability, logging using MLflow and Unity Catalog for managing and securing metadata. 
+#### Predictive Modeling with Explainability, logging using MLflow and Unity Catalog for managing and securing metadata. 
 
-## Problem Statement
+### Problem Statement
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance
 
 This project demonstrates an end-to-end machine learning pipeline using Databricks. It includes data exploration with Unity Catalog, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using SHAP. MLflow is used extensively to track experiments, log metrics, and store artifacts for reproducibility.
 
-## Objectives
+### Objectives
 Build an accurate attrition prediction model using clean, preprocessed data.
 
 Use Unity Catalog for secure and centralized data access.
@@ -14,13 +14,13 @@ Interpret model behavior using SHAP explainability and Identify key drivers of e
 
 Create Mlflow Pipeline for Model Reproducibility, version control and Management, logging metrics and artifacts. 
 
-## Dataset Overview
+### Dataset Overview
 
 The dataset used in this project is sourced includes data for 1,470 employees, with various attributes such as demographics, job role, satisfaction levels, and performance metrics.
 
-## Key Steps Involved
+### Key Steps Involved
 
-### Unity Catalog Integration: 
+#### Unity Catalog Integration: 
 
 Created a Unity Catalog (ml_catalog) and associated schema (ml_schema) under a managed volume to store both the complete dataset and the training subset in Delta format. This structure enables governed, scalable, and versioned access to data for machine learning workflow 
 
@@ -30,7 +30,7 @@ Created a Unity Catalog (ml_catalog) and associated schema (ml_schema) under a m
 <img width="1022" alt="Screenshot 2025-06-26 at 20 10 41" src="https://github.com/user-attachments/assets/741696ff-5a02-4574-b761-50424fcd0900" />
 
 
-## Data Visualization:
+#### Data Visualization:
 
 #### 1. Years Since Last Promotion By Job Level and Attrition. 
 
@@ -52,7 +52,7 @@ Sales Representative has Significant difference between attrition groups: those 
 
 Human Resources with Lower daily rate range for employees who left compared to those who stayed. Potential area for pay structure revision or deeper investigation into job satisfaction. 
 
-## To ensure that only statistically significant features contribute to the model, I applied univariate feature selection techniques tailored to the data types:
+#### To ensure that only statistically significant features contribute to the model, I applied univariate feature selection techniques tailored to the data types:
 
 **1.For categorical features (vs. categorical target), I applied the Chi-Square test. Features with a p-value < 0.05 and a Chi-Square statistic > 15 were retained. This threshold indicates strong dependence between the feature and target variable, confirming their predictive relevance.**
 
@@ -66,16 +66,16 @@ Human Resources with Lower daily rate range for employees who left compared to t
 
 These thresholds help strike a balance between statistical rigor and practical model performance, reducing noise and enhancing model interpretability.
 
-## Label Encoding to transform categorical features to numerical
+#### Label Encoding to transform categorical features to numerical
 
 ![image](https://github.com/user-attachments/assets/697e7881-331c-47fc-bda3-26e926e8ae46)
 
 
-## Model Experimentation: 
+#### Model Experimentation: 
 
 <img width="1039" alt="Screenshot 2025-06-26 at 20 10 52" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
 
-## Model Traning and Evaluation using MLflow
+#### Model Traning and Evaluation using MLflow
 
 
 ![image](https://github.com/user-attachments/assets/051b5b34-ebd0-42c0-9339-789a19b74836)
