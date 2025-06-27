@@ -176,7 +176,7 @@ Retraining model on live data in production Environment.
 AI Agent to flag alerts on employee attrition under job role, department with strategic recommendations, which can save millions on money on hiring new employee. 
 
 
-## 🧰 Tech Stack
+### Tech Stack
 
 - **Languages**: Python, SQL  
 - **Libraries**: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `mlflow`, `pyspark`, `shap`  
@@ -184,6 +184,16 @@ AI Agent to flag alerts on employee attrition under job role, department with st
 - **Version Control & Tracking**: MLflow, Unity Catalog
 
 ---
+
+### Business Value
+
+This model enables HR departments to:
+
+- Proactively intervene with at-risk employees (based on high attrition scores)
+- Optimize pay structure in high-risk roles like Sales or HR
+- Justify budget allocation for promotions and training at key senior levels
+- Reduce churn cost by retaining skilled senior professionals
+
 
 ## ⚙️ Installation
 
