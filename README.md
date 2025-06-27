@@ -1,4 +1,4 @@
-## Employee Attrition Prediction Pipeline with MLflow, Unity Catalog & SHAP
+## Employee Attrition Prediction Pipeline using MLflow, Unity Catalog & SHAP. 
 
 ### Problem Statement
 
@@ -8,7 +8,7 @@ This project demonstrates an end-to-end machine learning pipeline using **Databr
 
 ---
 
-### Objectives
+### Objectives:
 
 - Build an accurate attrition prediction model using clean, preprocessed data.
 - Use Unity Catalog for secure and centralized data access.
@@ -17,7 +17,7 @@ This project demonstrates an end-to-end machine learning pipeline using **Databr
 
 ---
 
-### Dataset Overview
+### Dataset Overview:
 
 - **Total records**: 1,470 employees
 - **Attributes**: Demographics, job role, satisfaction levels, performance metrics, and more.
@@ -36,7 +36,7 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ---
 
-### Data Visualization
+### Data Visualization:
 
 ### 1. Years Since Last Promotion By Job Level and Attrition
 
@@ -58,11 +58,11 @@ This structure enables governed, scalable, and versioned access to data for the 
 
 ---
 
-## 🧪 Feature Selection Techniques
+### Feature Selection Techniques:
 
 To ensure only statistically significant features contribute to the model, univariate feature selection was applied:
 
-### Categorical Features (vs. Categorical Target)
+### Categorical Features vs Categorical Target)
 
 - **Method**: Chi-Square Test
 - **Criteria**: `p < 0.05` and `Chi-Square > 15`
@@ -71,7 +71,7 @@ To ensure only statistically significant features contribute to the model, univa
 
 ---
 
-### Numerical Features (vs. Categorical Target)
+### Numerical Features vs Categorical Target)
 
 - **Method**: ANOVA F-Test
 - **Criteria**: `p < 0.05` and `F-statistic > 5`
@@ -82,19 +82,23 @@ To ensure only statistically significant features contribute to the model, univa
 
 ## 🔢 Label Encoding
 
-Transformed categorical features into numeric format using label encoding.
+Transformed categorical features into numeric format using label encoding. This Ensures that our model generalizes well on numerical datasets. 
 
 ![Label Encoding](https://github.com/user-attachments/assets/697e7881-331c-47fc-bda3-26e926e8ae46)
 
 ---
 
-## 🚀 Model Experimentation
+## 🚀 Model Experimentation:
+
+Setting the Experimentation inside Databricks Notebook. 
 
 <img width="1039" alt="Experimentation" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
 
 ---
 
 ## 📈 Model Training & Evaluation using MLflow
+
+This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
 
 ![MLflow Training](https://github.com/user-attachments/assets/051b5b34-ebd0-42c0-9339-789a19b74836)
 
@@ -113,9 +117,7 @@ As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duratio
 
 We tracked and compared multiple models — Logistic Regression, Random Forest, and XGBoost — using MLflow. 
 
-Each run recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall, f1, optimized_metric and hyperparameters
-
-This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
+Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall and f1 score. 
 
 
 <img width="922" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
