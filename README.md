@@ -2,11 +2,11 @@
 
 *Predicting employee churn and uncovering drivers of attrition using Classification Models - XGBoost, SHAP for Explainaibility, Unity Catalog for data tracking and MLflow for model management and creating reproducible codes*. 
 
-### Problem Statement
+### Problem Statement:
 
 Employee retention is critical for organizational success. This project aims to understand why and when employees are most likely to leave an organization. By identifying the key factors driving employee attrition, organizations can implement targeted strategies to improve retention and plan new hiring in advance.
 
-This project demonstrates an end-to-end machine learning pipeline using **Databricks**. It includes data exploration with **Unity Catalog**, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using **SHAP**. **MLflow** is used extensively to track experiments, log metrics, and store artifacts for reproducibility.
+*This project demonstrates an end-to-end machine learning pipeline using **Databricks**. It includes data exploration with **Unity Catalog**, preprocessing, feature selection via A/B testing, model training, evaluation, and explainability using **SHAP**. **MLflow** is used extensively to track experiments, log metrics, and store artifacts for reproducibility.*
 
 ---
 
