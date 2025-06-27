@@ -104,6 +104,8 @@ Setting the Experimentation inside Databricks Notebook.
 
 This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
 
+Logged key hyperparameters, evaluation metrics, trained model and visual artifacts like confusion matrix for every run — making it easy to reproduce or explain later.
+
 ![MLflow Training](https://github.com/user-attachments/assets/051b5b34-ebd0-42c0-9339-789a19b74836)
 
 ---
@@ -111,6 +113,9 @@ This centralized tracking ensured experiment reproducibility, hyperparameter ver
 ### MLflow Metrics and Summary: 
 
 As we can see from screenshot below from Databricks MLFlow UI, Run Name, Duration of each run and metrics logged. 
+
+Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Resgistry in databricks to serve  it later for deployment and making production level predictions.
+
 We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms.
 
 <img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
