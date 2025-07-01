@@ -1,6 +1,6 @@
 ## Workforce Attrition Prediction with Explainable and Reproducible ML
 
-Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with  classification and booster algorithms, SHAP for explainability and trustworthy insights, Unity Catalog to stores models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
+Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with  classification and booster algorithms, SHAP for explainability and trustworthy insights, Unity Catalog to store models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
 
 ### Problem Statement:
 
