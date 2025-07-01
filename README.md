@@ -183,11 +183,11 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 
 ---
 
-### Model Resgistry:
+### Model Registry:
 
 <img width="878" alt="Screenshot 2025-07-01 at 15 35 05" src="https://github.com/user-attachments/assets/8c874b9d-2f28-4a8b-97b8-a2c591cf2c37" />
 
-## Conclusion
+## Conclusion:
 
 - **Promotion delays** and **low compensation** are key attrition drivers.
 - Unity Catalog ensures secure, governed, and scalable data access.
@@ -214,7 +214,7 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 
 ---
 
-### Business Value
+### Business Value:
 
 This model enables HR departments to:
 
