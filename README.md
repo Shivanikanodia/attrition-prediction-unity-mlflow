@@ -31,11 +31,11 @@ Each stage of the pipeline was built for reproducibility, scalability, and inter
 ### Dataset Overview:
 
 - **Total records**: 1,470 employees
-- **Attributes**: Demographics, job role, satisfaction levels, performance metrics, and more.
+- **Attributes**: Demographics, Job Role, Satisfaction levels, Performance metrics etc.
 
 ---
 
-### Unity Catalog for Data Storage:
+### Unity Catalog for Data Storage and Access Control:
 
 Created a Unity Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format.
 
