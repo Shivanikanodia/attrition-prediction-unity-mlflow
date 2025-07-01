@@ -103,7 +103,7 @@ To ensure only statistically significant features contribute to the model, univa
 
 Transformed categorical features into numeric format using label encoding. This Ensures that our model generalizes well on numerical datasets.
 
-I did not choose why one-hot encoding to reduce dimensionality for tree-based models like XGBoost which handle label encoding well.
+I did not choose one-hot encoding to reduce dimensionality for tree-based models like XGBoost which handle label encoding well.
 
 ![Label Encoding](https://github.com/user-attachments/assets/697e7881-331c-47fc-bda3-26e926e8ae46)
 
@@ -194,11 +194,14 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 
 ### Future Scope:
 
-Retraining model on live data in production Environment.
-AI Agent to flag alerts on employee attrition under job role, department with strategic recommendations, which can save millions on money on hiring new employee. 
+- Automating retraining via Databricks Jobs
+
+- Real-time SHAP scoring or dashboarding with Streamlit/Power BI
+
+- Agent Bricks for notifications to HR Slack/Email (you hinted at AI alerts)
 
 
-### Tech Stack
+### Tech Stack:
 
 - **Languages**: Python, SQL  
 - **Libraries**: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `mlflow`, `pyspark`, `shap`  
@@ -217,17 +220,23 @@ This model enables HR departments to:
 - Reduce churn cost by retaining skilled senior professionals
 
 
-## ⚙️ Installation
-
-```
-# Clone the repo
+# 📁 Clone the repository
 git clone https://github.com/<ShivaniKanodia>/employee-attrition-mlpipeline.git
 cd employee-attrition-mlpipeline
 
-### 🔧 Requirements
-- Python 3.8+
-- Databricks Community or Enterprise account
+# 📦 Install Python dependencies
+pip install -r requirements.txt
 
-# Install dependencies
-pip install -r requirements.txt  
+## Requirements.txt
+
+pandas ==
+numpy ==
+scikit-learn ==
+matplotlib ==
+seaborn == 
+mlflow ==
+shap ==
+pyspark ==
+xgboost == 
+
 
