@@ -41,6 +41,8 @@ Created a Unity Catalog (`ml_catalog`) and associated schema (`ml_schema`) under
 
 This structure enables governed, scalable, and versioned access to data for the ML workflow.
 
+<img width="889" alt="Screenshot 2025-07-01 at 16 02 30" src="https://github.com/user-attachments/assets/eec97b70-dc08-4a62-a059-76262f88df68" />
+
 ![Unity Catalog](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
 
 
