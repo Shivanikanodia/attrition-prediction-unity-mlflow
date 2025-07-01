@@ -1,14 +1,14 @@
 ## Workforce Attrition Prediction with Explainable and Reproducible ML
 
-*Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices.
-Built with XGBoost for classification, SHAP for explainability, Unity Catalog for governed data access, and MLflow for experiment tracking and model reproducibility* 
+Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with  classification and booster algorithms, SHAP for explainability and trustworthy insights, Unity Catalog to stores models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
 
 ### Problem Statement:
 
-Employee attrition poses a significant risk to organizational stability and workforce planning.
-This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind their decisions.
+Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.
 
-By leveraging machine learning, the goal is to empower HR teams with proactive insights—helping them improve retention and reduce the high cost of unplanned exits.
+By leveraging machine learning models, MLflow, and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.
+
+Given that we have data on former employees, this is a standard supervised classification problem where the label is a binary variable, 0 (likely to stay), 1 (likely to leave). In this study, our target variable Y is the probability of an employee leaving the company.
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
