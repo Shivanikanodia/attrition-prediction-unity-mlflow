@@ -224,23 +224,24 @@ This model enables HR departments to:
 - Reduce churn cost by retaining skilled senior professionals
 
 
-# 📁 Clone the repository
+### 📁 Clone the repository
 git clone https://github.com/<ShivaniKanodia>/employee-attrition-mlpipeline.git
 cd employee-attrition-mlpipeline
 
-# 📦 Install Python dependencies
+### 📦 Install Python dependencies
 pip install -r requirements.txt
 
-## Requirements.txt
+### Requirements.txt
 
-pandas ==
-numpy ==
-scikit-learn ==
-matplotlib ==
-seaborn == 
-mlflow ==
-shap ==
-pyspark ==
-xgboost == 
+pandas==1.5.3
+numpy==1.24.3
+scikit-learn==1.3.0
+matplotlib==3.7.1
+seaborn==0.12.2
+xgboost==1.7.6
+shap==0.42.1
+mlflow==2.12.1
+pyspark==3.5.1
+
 
 
