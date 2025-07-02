@@ -240,12 +240,19 @@ This model significantly outperformed others like Random Forest and Logistic Reg
 
 ## Conclusion:
 
-- **Promotion delays** and **low compensation** are key attrition drivers.
+- After evaluating multiple models—including Logistic Regression, Random Forest, and XGBoost—XGBoost emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.21, it struck an effective balance between interpretability, performance, and generalization.
+
+- The model achieved a recall of 68% and precision of 43% on the minority class (attrition), which is crucial for early risk detection while minimizing false positives that may harm employee trust. Compared to Random Forest, which achieved 36% recall at threshold 0.5 and 70% recall with 40% precision at threshold 0.39, XGBoost provided a more reliable balance—particularly avoiding over-flagging false attrition cases while retaining strong detection capability.
+
+- Key insights revealed that Laboratory Technicians, Healthcare Representatives, and Sales Executives—often with 3–4 years of tenure and no promotions or salary increases—are at higher risk. This indicates that the Sales department may require focused development around promotions and compensation.
+
+Additionally, employees who have spent extended periods under the same manager or in the same role showed higher attrition probability, pointing to career stagnation and lack of growth opportunities as significant drivers.
+
+
 - Unity Catalog ensures secure, governed, and scalable data access.
 - SHAP explainability provides transparency into model decisions.
 - MLflow ensures experiment reproducibility and tracking for deployment.
   
-
 ---
 
 
