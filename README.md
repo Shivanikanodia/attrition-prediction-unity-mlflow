@@ -111,10 +111,9 @@ To ensure only statistically significant features contribute to the model, univa
 
 ### Numerical Features vs Categorical Target
 
-
-- Used ANOVA F-Test to measure whether the means of a our numerical feature differ significantly across the classes (Yes/No) of the target - Attrition..
+- Used ANOVA F-Test to measure whether the means of a our numerical feature differ significantly across the classes (Yes/No) of the target - Attrition.
 - Features with p values < 0.05` states that the difference is statistically significant and `F-statistic > 5` were selected from the test.
-- 
+
 
 <img width="901" alt="ANOVA Stats" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
 
