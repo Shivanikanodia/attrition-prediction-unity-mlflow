@@ -213,16 +213,15 @@ High values (pink) and low values (blue) were assessed for their influence on pr
 
 
 This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
-The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
+The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. 
+This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
 
 **True Negatives (TN)**: 205 — Correctly predicted “no attrition”
   **True Positives (TP)**: 32 — Correctly predicted “attrition”
   **False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
   **False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
 
-
 - Lower false negatives improve recall — crucial for catching real churn cases.
-- 
 
 
 ![image](https://github.com/user-attachments/assets/57be8037-3c30-4c01-ac9e-fd2fa3967109)
@@ -249,12 +248,9 @@ The model Correctly predicted 205 no-attritions and 32 attritions and Misclassif
 
 ### Future Scope:
 
+- Automating retraining via Databricks Jobs and retraining with 50,000 row making inference on Production level data. 
 
-- Automating retraining via Databricks Jobs
-
-- Real-time SHAP scoring or dashboarding with Streamlit/Power BI
-
-- Agent Bricks for notifications to HR Slack/Email (you hinted at AI alerts)
+- AI Agent for Attrition Predictions, giving alerts on employee sentiments and recommending strategies. 
 
 
 ### Tech Stack:
