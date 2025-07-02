@@ -211,15 +211,19 @@ High values (pink) and low values (blue) were assessed for their influence on pr
 
 ### Confusion Matrix:
 
+The confusion matrix provides a clear view of the model’s performance by showing how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives).
 
-This matrix helps visualize how many predictions were correct (True Positives and True Negatives) versus incorrect (False Positives and False Negatives). 
-The model Correctly predicted 205 no-attritions and 32 attritions and Misclassified 42 as attrition when no attrition and 15 as no attrition when attrition happends. 
-This is acting significantly better then other models like Random Forest and Logistic Regression where we achieved high False negatives - very crucial to reduce for our use case. 
+In our case, the model:
+
+ - Correctly predicted 205 non-attritions (True Negatives) and 32 attritions (True Positives)
+ - Misclassified 42 instances as attrition when it was not (False Positives) and 15 instances as non-attrition when attrition actually     occurred (False Negatives)
+
+This model significantly outperformed others like Random Forest and Logistic Regression, both of which produced a much higher number of False Negatives—a critical metric in our use case, as missing true attrition cases could lead to substantial business impact. Reducing False Negatives was a top priority, and this model demonstrated a clear advantage in that regard.
 
 **True Negatives (TN)**: 205 — Correctly predicted “no attrition”
-  **True Positives (TP)**: 32 — Correctly predicted “attrition”
-  **False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
-  **False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
+**True Positives (TP)**: 32 — Correctly predicted “attrition”
+**False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
+**False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
 
 - Lower false negatives improve recall — crucial for catching real churn cases.
 
