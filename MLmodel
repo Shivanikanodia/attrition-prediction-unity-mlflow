@@ -1,0 +1,56 @@
+artifact_path: dbfs:/databricks/mlflow-tracking/216452962339927/logged_models/m-5d06b175ff4b456fab2f0eb794aa9c2a/artifacts
+databricks_runtime: client.2.5
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-5d06b175ff4b456fab2f0eb794aa9c2a
+model_size_bytes: 49249
+model_uuid: m-5d06b175ff4b456fab2f0eb794aa9c2a
+prompts: null
+run_id: c9a89ce5283547569d044a2dca89d311
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "integer", "name": "TotalWorkingYears", "required": true}, {"type":
+    "integer", "name": "YearsInCurrentRole", "required": true}, {"type": "integer",
+    "name": "MonthlyIncome", "required": true}, {"type": "integer", "name": "Age",
+    "required": true}, {"type": "integer", "name": "YearsWithCurrManager", "required":
+    true}, {"type": "integer", "name": "YearsAtCompany", "required": true}, {"type":
+    "integer", "name": "DistanceFromHome", "required": true}, {"type": "integer",
+    "name": "DailyRate", "required": true}, {"type": "long", "name": "OverTime", "required":
+    true}, {"type": "long", "name": "JobRole", "required": true}, {"type": "integer",
+    "name": "JobLevel", "required": true}, {"type": "long", "name": "StockOptionLevel",
+    "required": true}, {"type": "long", "name": "MaritalStatus", "required": true},
+    {"type": "integer", "name": "JobInvolvement", "required": true}, {"type": "long",
+    "name": "BusinessTravel", "required": true}, {"type": "integer", "name": "EnvironmentSatisfaction",
+    "required": true}, {"type": "integer", "name": "JobSatisfaction", "required":
+    true}, {"type": "integer", "name": "WorkLifeBalance", "required": true}, {"type":
+    "integer", "name": "NumCompaniesWorked", "required": true}, {"type": "long", "name":
+    "Department", "required": true}, {"type": "long", "name": "EducationField", "required":
+    true}, {"type": "integer", "name": "TrainingTimesLastYear", "required": true},
+    {"type": "double", "name": "log_MonthlyIncome", "required": true}, {"type": "double",
+    "name": "log_TotalWorkingYears", "required": true}, {"type": "double", "name":
+    "log_YearsAtCompany", "required": true}, {"type": "double", "name": "log_YearsInCurrentRole",
+    "required": true}, {"type": "double", "name": "log_YearsWithCurrManager", "required":
+    true}, {"type": "double", "name": "log_DistanceFromHome", "required": true}, {"type":
+    "double", "name": "log_DailyRate", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-25 22:40:51.250374'
