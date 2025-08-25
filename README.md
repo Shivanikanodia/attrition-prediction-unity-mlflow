@@ -194,6 +194,13 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 
 --
 
+### Model Serving and Registry: 
+
+I've provided signatures examples to be used by registered and served model for making predictions at endpoint. Below is snapshot for same. 
+
+<img width="1784" height="1412" alt="image" src="https://github.com/user-attachments/assets/0fcedbef-b014-419f-9714-b29c7d71a4d1" />
+
+
 
 ### SHAP Explainability:
 
