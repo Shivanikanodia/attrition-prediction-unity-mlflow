@@ -14,7 +14,7 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 - Data Management with Unity Catalog (secure, versioned Delta tables)
 
-- Exploratory Analysis to uncover attrition trends by role, income, and promotion history
+- Exploratory Analysis to uncover attrition trends by Job Role, Income and Daily Rate, and Promotion History
 
 - Feature Selection using statistical tests (Chi-Square, ANOVA)
 
