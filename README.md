@@ -37,7 +37,7 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 ### Unity Catalog for Data Storage and Access Control:
 
-Created a Unity Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format.
+Created a Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format.
 
 This structure enables governed, scalable, and versioned access to data for the ML workflow.
 
