@@ -59,38 +59,11 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 ### Data Visualization:
 
 
-### 1. Years Since Last Promotion By Job Level and Attrition
-
-
-<img width="1075" alt="Years Since Last Promotion" src="https://github.com/user-attachments/assets/ff088eb7-efc3-4874-8d5f-8f1d66e45913" />
-
-
-- Median years since promotion is ≈1 year for both groups at entry-level.
-- For job level 5, employees who left tend to have higher "Years Since Last Promotion."
-- **Insight**: Delayed promotions at senior levels may increase attrition risk.
-
-
----
-
-### 2. Daily Rate By Job Level and Attrition
-
-
-<img width="1068" alt="Daily Rate" src="https://github.com/user-attachments/assets/4d0b6e6c-d0b5-4e9c-bdf4-b104623a0ef0" />
-
-
-- **Sales Representatives** who left had lower hourly rates.
-- **Human Resources**: Lower daily rates among those who left.
-- **Insight**: Compensation disparities can drive attrition.
-  
-
----
-
 
 ### Feature Selection Techniques:
 
 
 To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog**
-
 
 **ml_catalog.ml_schema.anova_results**
 **ml_catalog.ml_schema.chisquare_results**
@@ -121,14 +94,6 @@ To ensure only statistically significant features contribute to the model, univa
 ---
 
 
-## 🔢 Label Encoding
-
-
-Transformed categorical features into numeric format using label encoding. This Ensures that our model generalizes well on numerical datasets.
-
-I did not choose one-hot encoding to reduce dimensionality for tree-based models like XGBoost which handle label encoding well.
-
-![Label Encoding](https://github.com/user-attachments/assets/697e7881-331c-47fc-bda3-26e926e8ae46)
 
 
 ---
