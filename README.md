@@ -10,19 +10,15 @@ By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal 
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
-- Data Management with Unity Catalog (secure, versioned Delta tables)
+- Data Management with Unity Catalog (secure and versioned Delta tables)
 
-- Exploratory Analysis to uncover attrition trends by Job Role, Income and Daily Rate, and Promotion History
+- Exploratory Data Analysis to uncover attrition trends by Job Role, Job Level, Income, Career Trajectory and Satisfaction level. 
 
-- Feature Selection using 
+- Feature Selection using Chi Square and T - testing, Feature Importance from Random Forest. 
+  
+- Model Development with Logistic Regression, Random Forest XGBoost and Model Tracking with MLflow (parameters, metrics, artifacts, comparison)
 
-- Model Development with Logistic Regression, Random Forest XGBoost. 
-
-- Explainability using SHAP for transparent and trustworthy decisions. 
-
-- Model Tracking with MLflow (parameters, metrics, artifacts, comparison)
-
- - Each stage of the pipeline was built for reproducibility, scalability, and interpretability.
+- Each stage of the pipeline was built for reproducibility, scalability, and used SHAP for interpretability.
 
 ---
 
@@ -46,6 +42,7 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 <img width="1022" alt="Unity Screenshot" src="https://github.com/user-attachments/assets/741696ff-5a02-4574-b761-50424fcd0900" />
 
 ---
+
 
 ### Data Visualization:
 
@@ -74,13 +71,17 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 
 **Chi- Square Testing:** 
 
+
 <img width="467" height="332" alt="Screenshot 2025-10-07 at 16 21 23" src="https://github.com/user-attachments/assets/037310da-d9a0-41fa-8fc4-e888bc511620" />
 
 **T-Test:**
 
+
 <img width="456" height="311" alt="Screenshot 2025-10-07 at 16 21 37" src="https://github.com/user-attachments/assets/6e12b45b-4d18-4116-93dc-07e8f57f9bad" />
 
+
 <img width="445" height="315" alt="Screenshot 2025-10-07 at 16 21 44" src="https://github.com/user-attachments/assets/6deb6d5d-e261-4cf7-8be8-3d75ac1c8883" />
+
 
 The t-test and chi-square analyses were conducted to examine relationships between various features and employee attrition.
 
@@ -107,11 +108,9 @@ Setting the Experimentation inside Databricks Notebook.
 ## 📈 Model Training & Evaluation using MLflow
 
 
-This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking
+This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking.
 
 Logged key hyperparameters, evaluation metrics, trained model and visual artifacts like confusion matrix for every run — making it easy to reproduce or explain later.
-
-<img width="1264" height="440" alt="Screenshot 2025-10-07 at 11 25 24" src="https://github.com/user-attachments/assets/f693697b-e089-41cc-ac34-b011333a2f3e" />
 
 
 ---
@@ -121,7 +120,7 @@ Logged key hyperparameters, evaluation metrics, trained model and visual artifac
 
 As we can see screenshot below from Databricks MLFlow UI with Run Name, Duration of each Run and metrics logged. 
 
-Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Resgistry in databricks to serve it later for deployment and making production level predictions.
+Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Registry in databricks to serve it later for deployment and making production level predictions.
 
 We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms of employee leaving.
 
@@ -135,9 +134,10 @@ I tracked and compared multiple models — Logistic Regression, Random Forest, a
 
 Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall and f1 score. 
 
-<img width="928" height="362" alt="Screenshot 2025-10-07 at 07 31 20" src="https://github.com/user-attachments/assets/5f1499cb-25e5-4f8c-bb85-1005b888d5ca" />
 
-<img width="908" height="363" alt="Screenshot 2025-10-07 at 07 30 50" src="https://github.com/user-attachments/assets/deb087ec-132e-446a-a847-430f7634a4f3" />
+<img width="908" height="363" alt="Screenshot 2025-10-07 at 07 30 50" src="https://github.com/user-attachments/assets/fcd14556-35a6-40a7-a289-db8e17fb9729" />
+
+<img width="928" height="362" alt="Screenshot 2025-10-07 at 07 31 20" src="https://github.com/user-attachments/assets/f5446022-0a39-4c09-98ee-10de40d85eda" />
 
 --
 
@@ -146,17 +146,6 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 I've provided signatures examples to be used by registered and served model for making predictions at endpoint. Below is snapshot for same. 
 
 <img width="1784" height="1412" alt="image" src="https://github.com/user-attachments/assets/0fcedbef-b014-419f-9714-b29c7d71a4d1" />
-
-
-### SHAP Explainability:
-
-
-SHAP analysis identified the most influential features in predicting attrition, with DailyRate, MonthlyIncome, TotalWorkingYears, and YearsAtCompany leading the list. DailyRate had the strongest impact, followed by tenure-related features.
-High values (pink) and low values (blue) were assessed for their influence on predictions, offering clear and transparent insights into model behavior.
-
-
-<img width="699" alt="ROC Curve" src="https://github.com/user-attachments/assets/24b77f97-4a3a-4238-81b4-8a30194d95b5" />
-
 
 --
 
@@ -171,26 +160,18 @@ This model significantly outperformed others like Random Forest and Logistic Reg
 
 - Lower false negatives improve recall — crucial for catching real churn cases.
 
-![image](https://github.com/user-attachments/assets/57be8037-3c30-4c01-ac9e-fd2fa3967109)
-
-
 ---
 
 ### Model Registry:
-
 
 <img width="878" alt="Screenshot 2025-07-01 at 15 35 05" src="https://github.com/user-attachments/assets/8c874b9d-2f28-4a8b-97b8-a2c591cf2c37" />
 
 
 ## Conclusion:
 
-- After evaluating multiple models—including Logistic Regression, Xgboost and Random Forest emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.38, it struck an effective balance between interpretability, performance, and generalization.
+- After evaluating multiple models—including Logistic Regression, Xgboost and Random Forest (with maximum depth of 6 and n_estimators of 200) emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.33, it struck an effective balance between interpretability, performance, and generalization. 
 
-- The model achieved a recall of 68% and precision of 43% on the minority class (attrition), which is crucial for early risk detection while minimizing false positives that may harm employee trust. 
-
-- Key insights revealed that Laboratory Technicians, Healthcare Representatives, and Sales Executives—often with 3–4 years of tenure and no promotions or salary increases—are at higher risk. This indicates that the Sales department may require focused development around promotions and compensation.
-
-Additionally, employees who have spent extended periods under the same manager or in the same role showed higher attrition probability, pointing to career stagnation and lack of growth opportunities as significant drivers.
+- The model achieved a recall of 82% and precision of 44% on detecting attrition, which is crucial for early risk detection while minimizing false positives that may harm employee trust.
 
 
 - Unity Catalog ensures secure, governed, and scalable data access.
