@@ -4,9 +4,9 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 ### Problem Statement:
 
-**Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.**
+Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.**
 
-**By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.**
+By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.**
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
@@ -39,13 +39,6 @@ Created a Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a man
 
 This structure enables governed, scalable, and versioned access to data for the ML workflow.
 
-![image](https://github.com/user-attachments/assets/dd4dcbdf-1cbb-420d-bd80-874eba5f51f8)
-
-
-
-![Unity Catalog](https://github.com/user-attachments/assets/00c377d8-3a01-47ab-9969-d4719ce93242)
-
-
 
 Below code describes all the tables stored in unity catalog, which is reliable data tracking for ML pipeline versioning.
 
@@ -60,7 +53,9 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 
 <img width="578" height="455" alt="Screenshot 2025-10-07 at 16 19 49" src="https://github.com/user-attachments/assets/cb57e4bb-2196-430d-a544-9110b76b954f" />
 
+
 <img width="569" height="401" alt="Screenshot 2025-10-07 at 16 19 57" src="https://github.com/user-attachments/assets/1baadcaf-4d71-4041-a9f1-b832d7659f22" />
+
 
 <img width="583" height="344" alt="Screenshot 2025-10-07 at 16 20 13" src="https://github.com/user-attachments/assets/bd07642a-17d8-4b89-aa9a-a2eb284a6d36" />
 
@@ -68,7 +63,9 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 
 <img width="512" height="625" alt="Screenshot 2025-10-07 at 16 20 34" src="https://github.com/user-attachments/assets/1b17bdc2-a6a7-4ce0-b992-dda22b0a0bcf" />
 
+
 <img width="527" height="628" alt="Screenshot 2025-10-07 at 16 20 49" src="https://github.com/user-attachments/assets/1ad8d5cb-d2d1-4a50-b48d-bec83261439e" />
+
 
 <img width="487" height="320" alt="Screenshot 2025-10-07 at 16 21 00" src="https://github.com/user-attachments/assets/48b74cab-051f-43b2-b3f6-8d4cda8e127d" />
 
@@ -79,9 +76,9 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 
 <img width="467" height="332" alt="Screenshot 2025-10-07 at 16 21 23" src="https://github.com/user-attachments/assets/037310da-d9a0-41fa-8fc4-e888bc511620" />
 
-<img width="456" height="311" alt="Screenshot 2025-10-07 at 16 21 37" src="https://github.com/user-attachments/assets/6e12b45b-4d18-4116-93dc-07e8f57f9bad" />
-
 **T-Test:**
+
+<img width="456" height="311" alt="Screenshot 2025-10-07 at 16 21 37" src="https://github.com/user-attachments/assets/6e12b45b-4d18-4116-93dc-07e8f57f9bad" />
 
 <img width="445" height="315" alt="Screenshot 2025-10-07 at 16 21 44" src="https://github.com/user-attachments/assets/6deb6d5d-e261-4cf7-8be8-3d75ac1c8883" />
 
@@ -93,9 +90,6 @@ This indicates that these variables, when considered individually, do not have a
 
 
 To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog**.
-
-**ml_catalog.ml_schema.anova_results**
-**ml_catalog.ml_schema.chisquare_results**
 
 ---
 
@@ -125,19 +119,13 @@ Logged key hyperparameters, evaluation metrics, trained model and visual artifac
 
 ### MLflow Metrics and Summary: 
 
-
 As we can see screenshot below from Databricks MLFlow UI with Run Name, Duration of each Run and metrics logged. 
 
 Used the MLflow UI in Databricks to compare multiple runs of Logistic Regression, Random Forest, and XGBoost. Selected the best model based on precision-recall trade-off and registered it using Model Resgistry in databricks to serve it later for deployment and making production level predictions.
 
 We used precision-recall curve evaluation and selected an optimal threshold to minimize false negatives while avoiding unnecessary false alarms of employee leaving.
 
-
-<img width="1267" alt="MLflow Metrics 1" src="https://github.com/user-attachments/assets/3aa46be3-58a5-4961-91f8-b138bc220283" />
-
-
-<img width="1233" alt="MLflow Metrics 2" src="https://github.com/user-attachments/assets/5c3c49d6-c90c-41f4-93d4-c038d72e7e35" />
-
+<img width="1264" height="440" alt="Screenshot 2025-10-07 at 11 25 24" src="https://github.com/user-attachments/assets/1ef7910e-319a-4d11-9ffd-5691308bcfb8" />
 
 
 ### MLFlow Tracking Dashboard:
@@ -179,18 +167,9 @@ The confusion matrix provides a clear view of the model’s performance by showi
 
 In our case, the model:
 
- - Correctly predicted 205 non-attritions (True Negatives) and 32 attritions (True Positives)
- - Misclassified 42 instances as attrition when it was not (False Positives) and 15 instances as non-attrition when attrition actually     occurred (False Negatives)
-
 This model significantly outperformed others like Random Forest and Logistic Regression, both of which produced a much higher number of False Negatives—a critical metric in our use case, as missing true attrition cases could lead to substantial business impact. Reducing False Negatives was a top priority, and this model demonstrated a clear advantage in that regard.
 
-**True Negatives (TN)**: 205 — Correctly predicted “no attrition”
-**True Positives (TP)**: 32 — Correctly predicted “attrition”
-**False Positives (FP)**: 42 — Predicted “attrition” but employee stayed
-**False Negatives (FN)**: 15 — Predicted “stay” but employee left (high risk)
-
 - Lower false negatives improve recall — crucial for catching real churn cases.
-
 
 ![image](https://github.com/user-attachments/assets/57be8037-3c30-4c01-ac9e-fd2fa3967109)
 
@@ -205,9 +184,9 @@ This model significantly outperformed others like Random Forest and Logistic Reg
 
 ## Conclusion:
 
-- After evaluating multiple models—including Logistic Regression, Random Forest, and XGBoost—XGBoost emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.21, it struck an effective balance between interpretability, performance, and generalization.
+- After evaluating multiple models—including Logistic Regression, Xgboost and Random Forest emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.38, it struck an effective balance between interpretability, performance, and generalization.
 
-- The model achieved a recall of 68% and precision of 43% on the minority class (attrition), which is crucial for early risk detection while minimizing false positives that may harm employee trust. Compared to Random Forest, which achieved 36% recall at threshold 0.5 and 70% recall with 40% precision at threshold 0.39, XGBoost provided a more reliable balance—particularly avoiding over-flagging false attrition cases while retaining strong detection capability.
+- The model achieved a recall of 68% and precision of 43% on the minority class (attrition), which is crucial for early risk detection while minimizing false positives that may harm employee trust. 
 
 - Key insights revealed that Laboratory Technicians, Healthcare Representatives, and Sales Executives—often with 3–4 years of tenure and no promotions or salary increases—are at higher risk. This indicates that the Sales department may require focused development around promotions and compensation.
 
