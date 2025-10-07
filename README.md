@@ -6,9 +6,7 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 **Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.**
 
-**By leveraging machine learning models, MLflow, and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.**
-
-*Given that we have data on former employees, this is a standard supervised classification problem where the label is a binary variable, 0 (likely to stay), 1 (likely to leave). In this study, our target variable Y is the probability of an employee leaving the company.*
+**By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.**
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
@@ -16,15 +14,15 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 - Exploratory Analysis to uncover attrition trends by Job Role, Income and Daily Rate, and Promotion History
 
-- Feature Selection using statistical tests (Chi-Square, ANOVA)
+- Feature Selection using 
 
-- Model Development with tuned XGBoost
+- Model Development with Logistic Regression, Random Forest XGBoost. 
 
-- Explainability using SHAP for transparent insights
+- Explainability using SHAP for transparent and trustworthy decisions. 
 
 - Model Tracking with MLflow (parameters, metrics, artifacts, comparison)
 
-  Each stage of the pipeline was built for reproducibility, scalability, and interpretability.
+ - Each stage of the pipeline was built for reproducibility, scalability, and interpretability.
 
 ---
 
@@ -58,46 +56,48 @@ Below code describes all the tables stored in unity catalog, which is reliable d
 
 ### Data Visualization:
 
+#### Visualizing Data Distribution by Department, Job Role and Job level:
+
+<img width="578" height="455" alt="Screenshot 2025-10-07 at 16 19 49" src="https://github.com/user-attachments/assets/cb57e4bb-2196-430d-a544-9110b76b954f" />
+
+<img width="569" height="401" alt="Screenshot 2025-10-07 at 16 19 57" src="https://github.com/user-attachments/assets/1baadcaf-4d71-4041-a9f1-b832d7659f22" />
+
+<img width="583" height="344" alt="Screenshot 2025-10-07 at 16 20 13" src="https://github.com/user-attachments/assets/bd07642a-17d8-4b89-aa9a-a2eb284a6d36" />
+
+### Checking Skewness and Outliers:
+
+<img width="512" height="625" alt="Screenshot 2025-10-07 at 16 20 34" src="https://github.com/user-attachments/assets/1b17bdc2-a6a7-4ce0-b992-dda22b0a0bcf" />
+
+<img width="527" height="628" alt="Screenshot 2025-10-07 at 16 20 49" src="https://github.com/user-attachments/assets/1ad8d5cb-d2d1-4a50-b48d-bec83261439e" />
+
+<img width="487" height="320" alt="Screenshot 2025-10-07 at 16 21 00" src="https://github.com/user-attachments/assets/48b74cab-051f-43b2-b3f6-8d4cda8e127d" />
 
 
 ### Feature Selection Techniques:
 
+**Chi- Square Testing:** 
 
-To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog**
+<img width="467" height="332" alt="Screenshot 2025-10-07 at 16 21 23" src="https://github.com/user-attachments/assets/037310da-d9a0-41fa-8fc4-e888bc511620" />
+
+<img width="456" height="311" alt="Screenshot 2025-10-07 at 16 21 37" src="https://github.com/user-attachments/assets/6e12b45b-4d18-4116-93dc-07e8f57f9bad" />
+
+**T-Test:**
+
+<img width="445" height="315" alt="Screenshot 2025-10-07 at 16 21 44" src="https://github.com/user-attachments/assets/6deb6d5d-e261-4cf7-8be8-3d75ac1c8883" />
+
+The t-test and chi-square analyses were conducted to examine relationships between various features and employee attrition.
+
+Features such as Years Since Last Promotion, Gender, Monthly Rate, Number of Companies Worked, Percent Salary Hike, Performance Rating, Employee Number, Hourly Rate, Education, and Relationship Satisfaction showed no statistically significant relationship with attrition (all p-values > 0.05).
+
+This indicates that these variables, when considered individually, do not have a strong influence on whether an employee leaves or stays. However, they may still contribute in combination with other factors when included in a predictive model.
+
+
+To ensure only statistically significant features contribute to the model, univariate feature selection was applied, both the tables are stored in **Unity Catalog**.
 
 **ml_catalog.ml_schema.anova_results**
 **ml_catalog.ml_schema.chisquare_results**
 
-
-### Categorical Features vs Categorical Target
-
-- Used Chi-Square Test to test whether there's an association between our  two categorical variables. (Eg., Attrition AND Job Roles (Sales, HR, IT))
-- Features with `p < 0.05` and `Chi-Square > 15` were selected from the testing results to further add into our analysis.
-
-- If the observed vs. expected frequencies differ significantly, the feature is likely influencing the target.
-
-<img width="888" alt="Chi-Square Stats" src="https://github.com/user-attachments/assets/e46a5a90-3bb6-4f56-9998-c83d4c28120d" />
-
-
 ---
-
-
-### Numerical Features vs Categorical Target
-
-- Used ANOVA F-Test to measure whether the means of a our numerical feature differ significantly across the classes (Yes/No) of the target - Attrition.
-- Features with p values < 0.05` states that the difference is statistically significant and `F-statistic > 5` were selected from the test.
-
-
-<img width="901" alt="ANOVA Stats" src="https://github.com/user-attachments/assets/2e256d34-f5a0-4786-b2c7-137a7b2a9c38" />
-
-
----
-
-
-
-
----
-
 
 ## 🚀 Model Experimentation:
 
@@ -117,7 +117,7 @@ This centralized tracking ensured experiment reproducibility, hyperparameter ver
 
 Logged key hyperparameters, evaluation metrics, trained model and visual artifacts like confusion matrix for every run — making it easy to reproduce or explain later.
 
-![MLflow Training](https://github.com/user-attachments/assets/051b5b34-ebd0-42c0-9339-789a19b74836)
+<img width="1264" height="440" alt="Screenshot 2025-10-07 at 11 25 24" src="https://github.com/user-attachments/assets/f693697b-e089-41cc-ac34-b011333a2f3e" />
 
 
 ---
@@ -147,15 +147,9 @@ I tracked and compared multiple models — Logistic Regression, Random Forest, a
 
 Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, precision, recall and f1 score. 
 
+<img width="928" height="362" alt="Screenshot 2025-10-07 at 07 31 20" src="https://github.com/user-attachments/assets/5f1499cb-25e5-4f8c-bb85-1005b888d5ca" />
 
-<img width="922" alt="Confusion Matrix" src="https://github.com/user-attachments/assets/0831eec3-0b56-492c-a56f-0f47f1ccb666" />
-
-
---
-
-
-<img width="914" alt="Precision-Recall" src="https://github.com/user-attachments/assets/e655b1c0-9b12-438c-bb14-dda791281ab1" />
-
+<img width="908" height="363" alt="Screenshot 2025-10-07 at 07 30 50" src="https://github.com/user-attachments/assets/deb087ec-132e-446a-a847-430f7634a4f3" />
 
 --
 
@@ -164,7 +158,6 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 I've provided signatures examples to be used by registered and served model for making predictions at endpoint. Below is snapshot for same. 
 
 <img width="1784" height="1412" alt="image" src="https://github.com/user-attachments/assets/0fcedbef-b014-419f-9714-b29c7d71a4d1" />
-
 
 
 ### SHAP Explainability:
