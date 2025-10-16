@@ -4,9 +4,9 @@ Predicting employee churn and identifying key drivers of attrition using scalabl
 
 ### Problem Statement:
 
-Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.**
+Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.
 
-By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.**
+By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
