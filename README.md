@@ -37,9 +37,11 @@ By leveraging machine learning models, MLflow and  SHAP.  the goal is to empower
 
 #### Unique values in each category to see frequency of different values within each coulmn and how its distributed.
 
-<img width="374" height="230" alt="Screenshot 2025-10-18 at 20 12 23" src="https://github.com/user-attachments/assets/93c8a4ad-3f8a-44ad-9047-a518e9c2deff" />
 
 <img width="681" height="302" alt="Screenshot 2025-10-18 at 20 12 14" src="https://github.com/user-attachments/assets/7ff0a416-b850-4067-a203-070e573994e0" />
+
+<img width="374" height="230" alt="Screenshot 2025-10-18 at 20 12 23" src="https://github.com/user-attachments/assets/93c8a4ad-3f8a-44ad-9047-a518e9c2deff" />
+
 
 
 ---
@@ -133,9 +135,6 @@ Setting the Experimentation inside Databricks Notebook.
 
 <img width="1039" alt="Experimentation" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
 
-<img width="1039" height="188" alt="Screenshot 2025-10-18 at 20 16 29" src="https://github.com/user-attachments/assets/77f7bd44-2dac-43ff-bf71-1a8ca5bbd098" />
-
-
 ---
 
 
@@ -143,10 +142,11 @@ Setting the Experimentation inside Databricks Notebook.
 
 
 This centralized tracking ensured experiment reproducibility, hyperparameter versioning, and performance benchmarking.
-
 Logged key hyperparameters, evaluation metrics, trained model and visual artifacts like confusion matrix for every run — making it easy to reproduce or explain later.
 
 <img width="1030" height="317" alt="Screenshot 2025-10-18 at 20 17 42" src="https://github.com/user-attachments/assets/e61b2a07-5f45-4808-9bd1-34e19743142a" />
+
+
 
 We trained three different models, Logistic regression with L1 and L2 Penality, and class weight balanced to account for coefficents and features.
 Random forest classiffier with hyperparamters like max_depth, n_estimators which will help us to generalize well, and deal with  variance and overfitting. 
@@ -182,8 +182,7 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 
 I've provided signatures examples to be used by registered and served model for making predictions at endpoint in JSON format. 
 
-
-<img width="878" alt="Screenshot 2025-07-01 at 15 35 05" src="https://github.com/user-attachments/assets/8c874b9d-2f28-4a8b-97b8-a2c591cf2c37" />
+<img width="1030" height="317" alt="Screenshot 2025-10-18 at 20 17 42" src="https://github.com/user-attachments/assets/011ae67d-faa8-4f3b-9aa9-3b77841a1de1" />
 
 ---
 
@@ -197,6 +196,28 @@ I've provided signatures examples to be used by registered and served model for 
 - MLflow ensures experiment reproducibility and tracking for deployment.
   
 ---
+
+### High-Risk Factors:**
+
+ Overtime, Low job satisfaction, Low income, Poor work-life balance
+
+** Employee Segments Most Affected:**
+
+- Junior-level employees (low JobLevel, less tenure)
+- Employees with long commutes or frequent travel
+- Those with limited growth or recognition.
+
+**Recommendation:**
+
+- Monitor satisfaction & workload regularly
+
+- Design retention bonuses or stock options
+
+- Improve manager engagement programs
+
+- Enable flexible work or hybrid policies
+
+--- 
 
 ### Future Scope:
 
@@ -213,15 +234,6 @@ I've provided signatures examples to be used by registered and served model for 
 - **Version Control & Tracking**: MLflow, Unity Catalog
   
 ---
-
-### Business Value:
-
-This model enables HR departments to:
-
-- Proactively intervene with at-risk employees (based on high attrition scores)
-- Optimize pay structure in high-risk roles. 
-- Reduce churn cost by retaining skilled senior professionals
-
 
 ### 📁 Clone the repository
 git clone https://github.com/<ShivaniKanodia>/employee-attrition-mlpipeline.git
