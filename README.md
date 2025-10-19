@@ -31,13 +31,7 @@ By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal 
 
 ### Unity Catalog for Data Storage and Access Control:
 
-Created a Catalog (`ml_catalog`) and associated schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format.
-
-This structure enables governed, scalable, and versioned access to data for the ML workflow.
-Below code describes all the tables stored in unity catalog, which is reliable data tracking for ML pipeline versioning.
-
-
-<img width="1022" alt="Unity Screenshot" src="https://github.com/user-attachments/assets/741696ff-5a02-4574-b761-50424fcd0900" />
+Created a Catalog (`ml_catalog`) and schema (`ml_schema`) under a managed volume to store both the complete dataset and the training subset in Delta format. This structure enables governed, scalable, and versioned access to data for the ML workflow.
 
 ---
 
