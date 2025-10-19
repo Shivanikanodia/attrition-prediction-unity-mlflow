@@ -31,6 +31,15 @@ By leveraging machine learning models, MLflow and  SHAP.  the goal is to empower
 - **Total records**: 1,470 employees
 - **Attributes**: Demographics, Job Role, Satisfaction levels, Performance metrics etc.
 
+<img width="319" height="293" alt="Screenshot 2025-10-18 at 20 10 11" src="https://github.com/user-attachments/assets/ab37f7e0-610e-4e44-b884-ee41b776ba94" />
+
+<img width="321" height="170" alt="Screenshot 2025-10-18 at 20 10 18" src="https://github.com/user-attachments/assets/cad4fc00-4556-44b7-ac0d-f17505f51a63" />
+
+#### Unique values in each category to see frequency of different values within each coulmn and how its distributed.
+
+<img width="374" height="230" alt="Screenshot 2025-10-18 at 20 12 23" src="https://github.com/user-attachments/assets/93c8a4ad-3f8a-44ad-9047-a518e9c2deff" />
+
+<img width="681" height="302" alt="Screenshot 2025-10-18 at 20 12 14" src="https://github.com/user-attachments/assets/7ff0a416-b850-4067-a203-070e573994e0" />
 
 
 ---
@@ -124,6 +133,8 @@ Setting the Experimentation inside Databricks Notebook.
 
 <img width="1039" alt="Experimentation" src="https://github.com/user-attachments/assets/a927d8d0-5ea7-4e53-8365-fdb842b5bd62" />
 
+<img width="1039" height="188" alt="Screenshot 2025-10-18 at 20 16 29" src="https://github.com/user-attachments/assets/77f7bd44-2dac-43ff-bf71-1a8ca5bbd098" />
+
 
 ---
 
@@ -135,6 +146,11 @@ This centralized tracking ensured experiment reproducibility, hyperparameter ver
 
 Logged key hyperparameters, evaluation metrics, trained model and visual artifacts like confusion matrix for every run — making it easy to reproduce or explain later.
 
+<img width="1030" height="317" alt="Screenshot 2025-10-18 at 20 17 42" src="https://github.com/user-attachments/assets/e61b2a07-5f45-4808-9bd1-34e19743142a" />
+
+We trained three different models, Logistic regression with L1 and L2 Penality, and class weight balanced to account for coefficents and features.
+Random forest classiffier with hyperparamters like max_depth, n_estimators which will help us to generalize well, and deal with  variance and overfitting. 
+Xgboost Classifier to deal with complex data points. 
 
 ---
 
