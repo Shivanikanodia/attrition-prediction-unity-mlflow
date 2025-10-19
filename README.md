@@ -1,22 +1,24 @@
 ## Workforce Attrition Prediction with Explainable and Reproducible ML
 
-Predicting employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with  classification and booster algorithms, SHAP for explainability and trustworthy insights, Unity Catalog to store models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
+Predicting Employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with classification and booster algorithms, SHAP for explainability and trustworthy insights, Used Unity Catalog to store models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
 
 ### Problem Statement:
 
 Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.
 
-By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal is to empower HR teams with proactive insights—helping them improve retention, reduce the high cost of unplanned exits, and recommend policies or strategies based on results to improve employee retention.
+By leveraging machine learning models, MLflow and  SHAP.  the goal is to empower HR teams with proactive insights—helping them improve retention through monitoring model metrics, reduce the cost of hiring, and design policies or strategies based on results from SHAP improving employee retention.
 
 **This is a complete, production-ready ML pipeline built on Databricks, covering:**
 
 - Data Management with Unity Catalog (secure and versioned Delta tables)
 
+- Data Cleaning and Collection. 
+
 - Exploratory Data Analysis to uncover attrition trends by Job Role, Job Level, Income, Career Trajectory and Satisfaction level. 
 
-- Feature Selection using Chi Square and T - testing, Feature Importance from Random Forest. 
+- Data Preprocessing (Data Transformation and Feature Selection using Chi-Square and T-test).
   
-- Model Development with Logistic Regression, Random Forest XGBoost and Model Tracking with MLflow (parameters, metrics, artifacts, comparison)
+- Model training, testing with Logistic Regression, Random Forest XGBoost and Model monitoring and tracking using MLflow (parameters, metrics, artifacts, comparison)
 
 - Each stage of the pipeline was built for reproducibility, scalability, and used SHAP for interpretability.
 
@@ -26,6 +28,8 @@ By leveraging machine learning models, MLflow, SHAP and Unity Catalog, the goal 
 
 - **Total records**: 1,470 employees
 - **Attributes**: Demographics, Job Role, Satisfaction levels, Performance metrics etc.
+
+
 
 ---
 
@@ -51,6 +55,9 @@ Created a Catalog (`ml_catalog`) and schema (`ml_schema`) under a managed volume
 
 <img width="583" height="344" alt="Screenshot 2025-10-07 at 16 20 13" src="https://github.com/user-attachments/assets/bd07642a-17d8-4b89-aa9a-a2eb284a6d36" />
 
+From the plot, we can see that most employees work in the Research and Development department, primarily in roles such as Sales Executive, Research Scientist, and Laboratory Technician. Most of these employees have educational backgrounds in Life Sciences and Medical fields. 
+
+
 
 ### Checking Skewness and Outliers:
 
@@ -65,6 +72,10 @@ Created a Catalog (`ml_catalog`) and schema (`ml_schema`) under a managed volume
 
 <img width="487" height="320" alt="Screenshot 2025-10-07 at 16 21 00" src="https://github.com/user-attachments/assets/48b74cab-051f-43b2-b3f6-8d4cda8e127d" />
 
+Features such as Distance from Home, Monthly Income, Years at Company, Years Since Last Promotion, and Total Working Years show right-skewed distributions, with most values concentrated on the lower end and a few large outliers. This skewness can negatively affect model performance.
+
+**Action:**
+To address this, we apply the log1p transformation, which compresses large values and slightly expands smaller ones—resulting in a more balanced distribution and improved model accuracy. 
 
 
 ### Feature Selection Techniques:
