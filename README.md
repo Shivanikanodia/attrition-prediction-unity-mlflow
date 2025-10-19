@@ -182,7 +182,7 @@ Each dashboard recorded: adjusted_f1, adjusted_precision, adjusted_recall, preci
 
 I've provided signatures examples to be used by registered and served model for making predictions at endpoint in JSON format. 
 
-<img width="1030" height="317" alt="Screenshot 2025-10-18 at 20 17 42" src="https://github.com/user-attachments/assets/011ae67d-faa8-4f3b-9aa9-3b77841a1de1" />
+<img width="632" height="227" alt="Screenshot 2025-10-18 at 20 46 12" src="https://github.com/user-attachments/assets/30af9741-4000-4161-b440-9446459431aa" />
 
 ---
 
@@ -197,11 +197,11 @@ I've provided signatures examples to be used by registered and served model for 
   
 ---
 
-### High-Risk Factors:**
+### High-Risk Factors:
 
  Overtime, Low job satisfaction, Low income, Poor work-life balance
 
-** Employee Segments Most Affected:**
+**Employee Segments Most Affected:**
 
 - Junior-level employees (low JobLevel, less tenure)
 - Employees with long commutes or frequent travel
@@ -231,7 +231,7 @@ I've provided signatures examples to be used by registered and served model for 
 - **Languages**: Python, SQL  
 - **Libraries**: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `mlflow`, `shap`  
 - **Platform**: Databricks  
-- **Version Control & Tracking**: MLflow, Unity Catalog
+- **Version Control & Tracking**: MLflow. 
   
 ---
 
