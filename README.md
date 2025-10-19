@@ -2,6 +2,8 @@
 
 Predicting Employee churn and identifying key drivers of attrition using scalable machine learning practices. Built with classification and booster algorithms, SHAP for explainability and trustworthy insights, Used Unity Catalog to store models and feature, and MLflow for experiment tracking, model reproducibility and transparency.
 
+---
+
 ### Problem Statement:
 
 Employee attrition poses a significant risk to organizational stability and workforce planning. This project focuses on predicting which employees are most likely to leave and uncovering the core reasons behind employees leaving organisation.
@@ -42,6 +44,7 @@ Created a Catalog (`ml_catalog`) and schema (`ml_schema`) under a managed volume
 
 ### Data Visualization:
 
+
 #### Visualizing Data Distribution by Department, Job Role and Job level:
 
 
@@ -54,6 +57,7 @@ Created a Catalog (`ml_catalog`) and schema (`ml_schema`) under a managed volume
 
 
 <img width="583" height="344" alt="Screenshot 2025-10-07 at 16 20 13" src="https://github.com/user-attachments/assets/bd07642a-17d8-4b89-aa9a-a2eb284a6d36" />
+
 
 From the plot, we can see that most employees work in the Research and Development department, primarily in roles such as Sales Executive, Research Scientist, and Laboratory Technician. Most of these employees have educational backgrounds in Life Sciences and Medical fields. 
 
@@ -72,11 +76,13 @@ From the plot, we can see that most employees work in the Research and Developme
 
 <img width="487" height="320" alt="Screenshot 2025-10-07 at 16 21 00" src="https://github.com/user-attachments/assets/48b74cab-051f-43b2-b3f6-8d4cda8e127d" />
 
+
 Features such as Distance from Home, Monthly Income, Years at Company, Years Since Last Promotion, and Total Working Years show right-skewed distributions, with most values concentrated on the lower end and a few large outliers. This skewness can negatively affect model performance.
 
 **Action:**
 To address this, we apply the log1p transformation, which compresses large values and slightly expands smaller ones—resulting in a more balanced distribution and improved model accuracy. 
 
+--- 
 
 ### Feature Selection Techniques:
 
@@ -84,7 +90,9 @@ To address this, we apply the log1p transformation, which compresses large value
 **Chi- Square Testing:** 
 
 
+
 <img width="467" height="332" alt="Screenshot 2025-10-07 at 16 21 23" src="https://github.com/user-attachments/assets/037310da-d9a0-41fa-8fc4-e888bc511620" />
+
 
 
 **T-Test:**
@@ -93,7 +101,9 @@ To address this, we apply the log1p transformation, which compresses large value
 <img width="456" height="311" alt="Screenshot 2025-10-07 at 16 21 37" src="https://github.com/user-attachments/assets/6e12b45b-4d18-4116-93dc-07e8f57f9bad" />
 
 
+
 <img width="445" height="315" alt="Screenshot 2025-10-07 at 16 21 44" src="https://github.com/user-attachments/assets/6deb6d5d-e261-4cf7-8be8-3d75ac1c8883" />
+
 
 
 
