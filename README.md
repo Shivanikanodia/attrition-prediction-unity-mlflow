@@ -186,6 +186,12 @@ I've provided signatures examples to be used by registered and served model for 
 
 ---
 
+### Model Interpretibility and Explainabilty:
+
+
+
+
+
 ## Conclusion:
 
 - After evaluating multiple models—including Logistic Regression, Xgboost and Random Forest (with maximum depth of 6 and n_estimators of 200) emerged as the best-performing model for our attrition prediction task. With a tuned threshold of 0.33, it struck an effective balance between interpretability, performance, and generalization. 
@@ -199,13 +205,9 @@ I've provided signatures examples to be used by registered and served model for 
 
 ### High-Risk Factors:
 
- Overtime, Low job satisfaction, Low income, Poor work-life balance
-
-**Employee Segments Most Affected:**
-
-- Junior-level employees (low JobLevel, less tenure)
-- Employees with long commutes or frequent travel
-- Those with limited growth or recognition.
+- Overtime, Low job satisfaction and Poor work-life balance
+- Employees with long commutes or frequent travel.
+- Those with limited growth, low income or recognition.
 
 **Recommendation:**
 
